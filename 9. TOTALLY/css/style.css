@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+/* 共通指定 */
+html {
+    font-size: 100%;
+    /* font-familyはbody指定の方が良い
+    理由として、ページ全体の指定としてfontを決めるから
+    */
+    font-family: "Raleway", sans-serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    border: none;
+    color: #333333;
+}
+
+.container {
+    margin-inline: auto;
+    max-width: 800px;
+}
+
+/* header */
+.header {
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 50px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.header__logo {
+    width: 100px;
+    height: auto;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    padding-inline: 5px;
+    /* SPのレスポンシブでoverflow-xでの横スクロールを入れるが、ここでline-heightを指定しないと、空間の問題でユーザーがスクロールしにくくなる（解答例を見て追記メモ） */
+    line-height: 64px;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+/* main */
+.product {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/*
+ 最初はflex:1;で均等割りしていたが、画像の大きさと横のtable幅があっていなかったので％で調整 
+ */
+
+.product__image,
+.product__information {
+    flex: 1;
+}
+
+.product__information h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-block: 20px;
+    margin-bottom: 20px;
+    border-block: 1px solid #c3c3c3;
+}
+
+.product__information p {
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.product__price {
+    margin-block: 30px;
+}
+
+.product__information table {
+    font-size: 0.8rem;
+}
+
+.product__information table th {
+    font-weight: 400;
+}
+
+.product__form table {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.col-color {
+    width: 20%;
+}
+
+.col-size {
+    width: 20%;
+}
+
+.product__form table th,
+.product__form table td {
+    border-bottom: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+    padding: 10px;
+}
+
+.product__form table th:last-child,
+.product__form table td:last-child {
+    border-right: none;
+}
+
+.product__form table tr:last-child td {
+    border-bottom: none;
+}
+
+.product__form table td select {
+    border: 1px solid #c3c3c3;
+    width: 100%;
+    padding-inline: 10px;
+    /*
+    appearanceのみで対応。必要時のみベンダープレフィックスを追加
+     -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    */
+    appearance: menulist;
+}
+
+.product__form input {
+    width: 100%;
+    background-color: #4b4b4b;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.product__detail {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #c3c3c3;
+    text-align: center;
+}
+
+.product__detail th {
+    background-color: #ecebeb;
+}
+
+.product__detail th,
+.product__detail td {
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+    padding-block: 10px;
+}
+
+.product__detail th:last-child,
+.product__detail td:last-child {
+    border-right: none;
+}
+
+/* footer */
+.footer {
+    padding-block: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* レスポンシブ */
+
+@media (max-width: 800px) {
+    /* header部分の下線なし気づかず */
+    .header {
+        border-bottom: none;
+    }
+    .product {
+        flex-direction: column;
+    }
+
+    .product__information {
+        padding-inline: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    /* ここは模写先のサイトが横スクロールを入れていたので不正解 */
+    .header__nav {
+        /* flex-direction: column;
+        gap: 10px; */
+        overflow-x: scroll;
+    }
+}

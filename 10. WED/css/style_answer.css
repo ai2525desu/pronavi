@@ -1,0 +1,466 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 4%;
+  background: #f0f0f0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.header-left ul {
+  display: flex;
+}
+
+.header-left ul li {
+  margin-right: 20px;
+}
+
+.header-left h1 {
+  line-height: 0;
+}
+
+.logo {
+  width: 100px;
+  margin-right: 50px;
+}
+
+.header-right a {
+  background: #000000;
+  color: white;
+  line-height: 80px;
+  width: 200px;
+  text-align: center;
+}
+
+.header-right a:hover {
+  opacity: 0.7;
+}
+
+/* mainvisual */
+
+.mainvisual {
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin-bottom: 120px;
+}
+
+.mainvisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main {
+  background: #f0f0f0;
+  padding-bottom: 120px;
+}
+
+/* 共通パーツ */
+
+section {
+  margin-bottom: 120px;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.section-title {
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: black;
+}
+
+.section-title .en {
+  font-size: 2.25rem;
+  font-weight: normal;
+  letter-spacing: 10px;
+  display: block;
+}
+
+.section-title .ja {
+  font-size: 0.875rem;
+  font-weight: normal;
+  display: block;
+  padding-bottom: 32px;
+}
+
+
+/* news */
+.news-list {
+  display: flex;
+}
+
+.news-item {
+  width: calc(100% / 3);
+  border-right: 1px solid black;
+  font-size: 0.85rem;
+  padding: 16px 20px;
+}
+
+.news a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item time {
+  margin-bottom: 16px;
+}
+
+.news-item span {
+  color: white;
+  background: black;
+  margin-left: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.news-item h3 {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.news-item:first-child {
+  padding-left: 0;
+}
+
+.news-item:last-child {
+  border-right: none;
+}
+
+/* about */
+
+.about {
+  display: flex;
+}
+
+.about-image {
+  width: 55%;
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-text {
+  width: 45%;
+  margin-top: 150px;
+  padding-inline: 64px;
+}
+
+.about-text .description p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+
+/* business */
+
+.contents-item {
+  max-width: 400px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.contents-item:first-child {
+  margin-bottom: 30px;
+}
+
+.contents-item img {
+  width: 100%;
+}
+
+.contents-item h3 {
+  position: relative;
+  margin-left: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.contents-item h3::before {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+}
+
+.item-left {
+  margin-top: 100px;
+}
+
+.business-items {
+  max-width: 850px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* company */
+.company {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.company-left {
+  width: 65%;
+  background: white;
+  padding: 100px 0 100px 6%;
+}
+
+.company-right {
+  width: 60%;
+  height: 350px;
+  margin-left: -85px;
+}
+
+.company-left dl {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.company-left dt {
+  width: 20%;
+  margin-bottom: 8px;
+}
+
+.company-left dd {
+  width: 80%;
+  margin-bottom: 8px;
+}
+
+.company-left .add {
+  margin-left: 20%;
+}
+
+.company-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* footer */
+footer {
+  padding-block: 32px;
+}
+
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-right p {
+  font-size: 0.8rem;
+}
+
+.copy-right {
+  font-size: 0.75rem;
+}
+
+/* sp */
+
+@media (max-width: 900px) {
+
+  .mainvisual {
+    margin-bottom: 80px;
+  }
+
+  main {
+    padding-bottom: 80px;
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .section-title .ja {
+    padding-bottom: 24px;
+  }
+
+  /* header */
+  header {
+    padding: 16px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .header-left {
+    flex-direction: column;
+    /* 左寄せ */
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  /* news */
+  .news .news-list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .news-item {
+    padding: 0;
+    width: 100%;
+    border-right: none;
+  }
+
+  /* about */
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 30px;
+    padding: 0;
+    padding-inline: 2%;
+  }
+
+  /* business */
+  .business-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-left {
+    margin-top: 0;
+  }
+
+  .contents-item:first-child {
+    margin-bottom: 0;
+  }
+
+  .contents-item {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+
+  /* company  */
+  .company {
+    flex-direction: column;
+  }
+
+  .company-left {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .company-right {
+    width: 100%;
+    margin-top: 20px;
+    /* マイナスを元に戻す */
+    margin-left: 0;
+  }
+
+
+  .company-left dt,
+  .company-left dd {
+    width: 100%;
+  }
+
+  .company-left dl {
+    flex-direction: column;
+    margin-bottom: 13px;
+  }
+
+  .company-left dt {
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+
+  .company-left dd {
+    margin-left: 16px;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .company-left .add {
+    margin-left: 16px;
+  }
+
+
+  /* footer  */
+  footer .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .logo {
+    margin-bottom: 10px;
+  }
+}

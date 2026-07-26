@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #e6e2d7;
+  color: #000;
+  font-family: "Noto Serif JP", serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* border: 1px solid red; */
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+
+header {
+
+  /* width: 100%によって縦書きが右に寄る */
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/top-background-pc.jpg);
+  background-size: cover;
+  background-position: center 40%;
+  padding: 60px 80px;
+  margin-bottom: 180px;
+  /* 「オンラインストアを見る」ボタンを配置するためのposition */
+  position: relative;
+  /* 縦書きの指定 */
+  writing-mode: vertical-rl;
+
+}
+
+.site-title {
+  margin-left: 60px;
+}
+
+.site-title img {
+  width: 40px;
+}
+
+nav li {
+  margin-left: 25px;
+}
+
+/*
+「オンラインストアを見る」ボタン
+positionで左下に配置
+*/
+header .onlinestore {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+}
+
+header .onlinestore a {
+  display: inline-block;
+  padding: 30px 18px;
+  border: solid 1px #ccc;
+}
+
+header .onlinestore a:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+news
+-------------------------------------------*/
+
+
+.wrapper{
+  margin-bottom: 180px;
+}
+
+.news {
+  writing-mode: vertical-rl;
+  width: 100%;
+}
+
+.news .section-title {
+  font-weight: normal;
+}
+
+.news .section-title .en {
+  font-size: 0.875rem;
+  margin-left: 15px;
+}
+
+.news .section-title .ja {
+  font-size: 2.25rem;
+  letter-spacing: 0.3rem;
+}
+
+.news .list {
+  padding: 80px 100px 0 0;
+}
+
+.news .list dl {
+  border-right: solid 1px #000;
+  padding: 15px 30px;
+}
+
+.news .list dl:last-child {
+  border-left: solid 1px #000;
+}
+
+.news .list dt {
+  font-size: 0.75rem;
+  padding-left: 5px;
+}
+
+/*-------------------------------------------
+products（共通）
+-------------------------------------------*/
+.products .wrapper{
+  display: flex;
+  margin-bottom: 180px;
+}
+
+.products .section-title {
+  font-weight: normal;
+  line-height: 1;
+  writing-mode: vertical-rl;
+}
+
+.products .section-title .ja {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 18px;
+}
+
+.products .section-title .en {
+  font-size: 0.875rem;
+}
+/*
+画像の上にテキストを重ねるためのpositionを設定
+*/
+.products .content {
+  width: 65%;
+  margin-top: 100px;
+  position: relative;
+}
+/*
+「position: absolute;」でテキストを画像の上に配置
+左右の配置位置は「#products1」と「#products2」で個別に指定
+*/
+.products .content .text {
+  width: 56%;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+}
+
+/*-------------------------------------------
+products1
+-------------------------------------------*/
+/*
+そのままではタイトルが左にくるため、「row-reverse」で順序を入れ替える。
+*/
+
+#product1 .wrapper {
+  flex-direction: row-reverse;
+}
+
+#product1 .section-title {
+  margin-left: 20px;
+}
+
+#product1 .content .text {
+  background: rgba(249, 233, 6, 0.6);
+  left: -20px;
+}
+
+/*-------------------------------------------
+product2
+-------------------------------------------*/
+
+#product2 .section-title {
+  margin-right: 20px;
+}
+
+#product2 .text {
+  background: rgba(149, 42, 38, 0.6);
+  right: -20px;
+}
+
+/*-------------------------------------------
+shop
+-------------------------------------------*/
+/*  
+「vertical-align: bottom;」を指定することで、Google Mapの下にできる隙間を消す
+*/
+.google-map iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 80px 30px 30px;
+}
+
+footer .inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+footer .inner .left,
+footer .inner .right {
+  writing-mode: vertical-rl;
+}
+
+footer .inner .logo {
+  width: 40px;
+  margin-left: 60px;
+}
+
+footer .inner .info {
+  line-height: 2;
+}
+
+footer .menu {
+  font-size: 1rem;
+  margin-right: 60px;
+}
+
+footer .menu li {
+  margin-left: 25px;
+}
+
+footer .copyright {
+  font-size: 0.625rem;
+  text-align: center;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media (max-width: 780px) {
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  header {
+    background-image: url(../img/top-background-sp.jpg);
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+
+  header .onlinestore {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  .news {
+    margin-bottom: 80px;
+  }
+
+  .news .section-title .ja {
+    font-size: 1.75rem;
+  }
+
+  .news .list {
+    padding: 20px 30px 0 0;
+  }
+
+  /*   4つ目以降を非表示にする  */
+  .news .list dl:nth-of-type(n + 4) {
+    display: none;
+  }
+
+  /*   3つ目の左側に罫線を引く   */
+  .news .list dl:nth-of-type(3) {
+    border-left: solid 1px #000;
+  }
+
+  .news .list dl {
+    padding: 15px 12px;
+  }
+
+  /*-------------------------------------------
+  Products
+  -------------------------------------------*/
+  .products {
+    margin-bottom: 100px;
+  }
+
+  .products .section-title .ja {
+    font-size: 1.5rem;
+  }
+  /*  スマホの場合は英語タイトルを非表示    */
+  .products .section-title .en {
+    display: none;
+  }
+
+  .products .content {
+    width: 90%;
+    margin-top: 70px;
+  }
+
+  .products .text {
+    font-size: 0.875rem;
+    padding: 30px 0;
+  }
+
+  /*-------------------------------------------
+  Product1
+  -------------------------------------------*/
+  #product1 .section-title {
+    margin-left: 10px;
+  }
+
+  /*-------------------------------------------
+  Products2
+  -------------------------------------------*/
+  #product2 .section-title {
+    margin-right: 10px;
+  }
+
+  /*-------------------------------------------
+  フッター
+  -------------------------------------------*/
+  footer {
+    padding: 40px 20px 30px 20px;
+  }
+
+  footer .menu li {
+    margin-left: 10px;
+  }
+
+  footer .menu {
+    font-size: 0.875rem;
+    margin-right: 25px;
+  }
+}

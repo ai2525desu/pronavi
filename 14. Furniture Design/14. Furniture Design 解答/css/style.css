@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+/*
+フッターを画面下に配置するために、
+「position: relative;」を設定、footerのposition:absolute と対応
+「min-height」で最小の高さを画面の高さにあわせる
+*/
+body {
+  color: #333;
+  font-size: .875rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+/*
+コンテンツ幅を設定するための共通クラス
+*/
+
+.wrapper {
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.page-title {
+  font-size: .875rem;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+/*
+「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
+※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
+設定している場合は、z-indexの数値が大きい方が前面に表示される
+*/
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+h1.site-title {
+  line-height: 1px;
+}
+
+.site-title a {
+  width: 180px;
+  display: inline-block;
+}
+
+/*
+ハンバーガーメニュー
+メニューが閉じている時は、「left: -300px;」で画面左に隠し、
+「opacity: 0;」で非表示にしている
+*/
+nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  color: #fff;
+  padding: 40px;
+  transition: all .5s;
+  z-index: 20;
+  opacity: 0;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav li {
+  margin-bottom: 14px;
+}
+
+/*
+ハンバーガーメニュー
+メニューが開いている時は、「left: 0;」「opacity: 1;」で
+画面左に表示する
+*/
+
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+
+.toggle_btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  /*基準*/
+  cursor: pointer;
+  z-index: 20;
+}
+
+/*
+ハンバーガーメニューの線の設定（メニューが閉じている時）
+*/
+.toggle_btn span {
+  /* spanはインライン要素のため */
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  transition: .5s;
+  position: absolute;
+  /*対象*/
+}
+
+/*
+1本目の線の位置を設定
+*/
+.toggle_btn span:nth-child(1) {
+  top: 10px;
+}
+
+/*
+2本目の線の位置を設定
+*/
+.toggle_btn span:nth-child(2) {
+  top: 18px;
+}
+
+/*
+ハンバーガーメニューの線の設定（メニューが開いている時）
+線の色を白に変更
+*/
+.open .toggle_btn span {
+  background-color: #fff;
+}
+
+/*
+1本目の線を-45度回転
+*/
+.open .toggle_btn span:nth-child(1) {
+  transform: translateY(4px) rotate(-45deg);
+}
+
+/*
+2本目の線を45度回転
+*/
+.open .toggle_btn span:nth-child(2) {
+  transform: translateY(-4px) rotate(45deg);
+}
+
+.mask {
+  display: none;
+  transition: .5s;
+}
+
+/*
+メニューを開いている時は、全体を黒背景にする
+*/
+.open .mask {
+  /* display: none;から出現 */
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/*-------------------------------------------
+TOP、PRODUCTS
+-------------------------------------------*/
+main {
+  padding-block: 100px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-list img {
+  margin-bottom: 8px;
+}
+
+.product-list p {
+  font-size: .75rem;
+}
+
+.link-text {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 32px;
+}
+
+/*-------------------------------------------
+ITEM
+-------------------------------------------*/
+
+.item {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.item .item-text {
+  width: 42%;
+}
+
+/*
+text-align: justify;
+テキストの両端を揃える
+*/
+.item .item-text p {
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.item .item-text dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item .item-text dt {
+  width: 30%;
+}
+
+.item .item-text dd {
+  width: 70%;
+}
+
+.item .item-img {
+  width: 50%;
+}
+
+/*-------------------------------------------
+ABOUT
+-------------------------------------------*/
+.about {
+  max-width: 600px;
+}
+
+.about p {
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/*-------------------------------------------
+COMPANY
+-------------------------------------------*/
+.company {
+  max-width: 600px;
+}
+
+.company dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.company dt {
+  width: 30%;
+  border-bottom: solid 1px #dcdbdb;
+  padding: 20px 10px;
+}
+
+.company dt:last-of-type {
+  border-bottom: none;
+}
+
+.company dd {
+  width: 70%;
+  border-bottom: solid 1px #dcdbdb;
+  padding: 20px 10px;
+}
+
+.company dd:last-of-type {
+  border-bottom: none;
+}
+
+/* グーグルマップのサイズを設定 */
+.company .map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+/*
+「position: absolute;」を設定して、フッター位置を画面下に設定
+*/
+footer.wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-block: 16px;
+}
+
+footer .menu {
+  display: flex;
+  gap: 32px;
+}
+
+footer .menu li {
+  font-size: .75rem;
+}
+
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media (max-width: 900px) {
+
+  /*-------------------------------------------
+  TOP、PRODUCTS
+  -------------------------------------------*/
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*-------------------------------------------
+  ITEM
+  -------------------------------------------*/
+  .item {
+    flex-direction: column;
+  }
+
+  .item .item-text {
+    width: 100%;
+  }
+
+  .item .item-img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  /*-------------------------------------------
+  COMPANY
+  -------------------------------------------*/
+  .company dl {
+    flex-direction: column;
+  }
+
+  .company dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+
+  .company dd {
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  /*-------------------------------------------
+  フッター
+  -------------------------------------------*/
+  footer {
+    flex-direction: column;
+  }
+
+  footer .menu {
+    margin-bottom: 8px;
+  }
+}

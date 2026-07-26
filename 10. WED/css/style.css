@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+/* 共通レイアウト */
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #f0f0f0;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.site-logo {
+    width: clamp(80px, 7vw, 100px);
+    height: auto;
+    /* vertical-alignでずれた分の調整 */
+    line-height: 5px;
+}
+
+section {
+    margin-bottom: 120px;
+}
+
+.section-title {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title__main {
+    font-size: 2.3rem;
+    font-weight: 400;
+    /* 解答：10px */
+    letter-spacing: 0.6rem;
+}
+
+.section-title__sub {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.section-title__sub::before {
+    /* subtitle下の下線のレイアウト設定 */
+    content: "";
+    position: absolute;
+    display: inline-block;
+    /*線の上下位置（今回margin-bottomと合わせて-24px）*/
+    bottom: -24px;
+    /*位置調整*/
+    width: 40px;
+    height: 1px;
+    background-color: black;
+}
+
+.container {
+    max-width: 1000px;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.header__inner {
+    width: 75%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header__inquiry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100%;
+    color: white;
+    background-color: black;
+}
+
+.header__inquiry:hover {
+    opacity: 0.7;
+}
+
+/* mainvisual */
+.mainvisual img {
+    /* 解答例では、calc(100vh - 80px)をすることで、header文の高さを引いて画面に収まるようにしている */
+    height: 100vh;
+    /* iPhoneのブラウザsafariによる表示の乱れを防ぐためのコード（CSSは後から書いたものが優位に読まれるが、古いブラウザでdvhが対応していない倍は100vhがレイアウトされるので二つ書くことでおかしな表示を防げる） */
+    height: 100dvh;
+}
+
+/* main */
+/* news */
+.news {
+    margin-top: 120px;
+}
+
+.news__card-wrap {
+    display: flex;
+}
+
+.news__card {
+    flex: 1;
+    padding-block: 16px;
+    padding-right: 20px;
+}
+
+.news__card:not(:first-child) {
+    border-left: 1px solid #6f6f6f;
+    padding-left: 20px;
+}
+
+.news__card-inner {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+}
+
+.news__card-inner time {
+    margin-right: 10px;
+}
+
+/* ここ、解答例ではかなりいろいろ指定しているがなぜ？ */
+/* これは、今後にラベル内部の文字数などが増えたときにサイズが文字によってばらばらになることを防ぐため */
+.news__card-inner span {
+    padding: 3px 8px;
+    background-color: black;
+    color: white;
+}
+
+.news__card h3 {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+/* about */
+.about {
+    display: flex;
+}
+
+.about__image {
+    width: 55%;
+}
+
+.about__image img {
+    /* 解答例では400px指定 */
+    height: 62vh;
+}
+
+.about__information {
+    width: 45%;
+    margin-top: 150px;
+    /* 解答：64px */
+    padding-inline: 60px;
+}
+
+.about__information p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* business */
+.business__list-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-inline: 60px;
+}
+
+.business__left-list {
+    margin-top: 100px;
+}
+
+/* 解答例ではfirst-childの方。この方が判定がシンプルなのでそのほうが良かったかも */
+.business__item:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+.business__item p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: relative;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.business__item p::before {
+    position: absolute;
+    content: "";
+    /* 解答例では特段指定していないのでなぜか */
+    /* position:absoluteにより、displayの効果はないため削除でＯＫ */
+    /* display: inline-block; */
+    top: 50%;
+    left: -15px;
+    width: 8px;
+    height: 1.5px;
+    background-color: black;
+}
+
+/* company */
+.company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.company__information {
+    background-color: white;
+    width: 65%;
+    padding-block: 100px;
+    padding-left: 60px;
+}
+
+.company__information dl {
+    /* 解答例ではflex+wrap */
+    display: grid;
+    /* 解答例ではdt+ddにwidth指定 */
+    grid-template-columns: 10% 90%;
+    column-gap: 20px;
+    row-gap: 10px;
+    font-size: 0.9rem;
+}
+
+.company__image {
+    width: 60%;
+    margin-left: -70px;
+}
+
+.company__image img {
+    height: 350px;
+}
+
+/* footer */
+.footer {
+    background-color: #fff;
+}
+
+.footer__inner {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: 40px;
+}
+
+.footer__inner address {
+    width: 22%;
+    font-size: 0.8rem;
+}
+
+.footer small {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    /* header */
+    .header {
+        padding: 15px;
+    }
+
+    .header__inner {
+        flex-direction: column;
+        width: 100%;
+        /* 解答例：flex-start */
+        /* align-items: normal;では、左寄せにしたいという意図が伝わりにくいためflex-startの方が望ましい */
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .header__inquiry {
+        display: none;
+    }
+
+    /* news */
+    .news__card-wrap {
+        flex-direction: column;
+    }
+
+    .news__card:not(:first-child) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    /* about */
+    .about {
+        flex-direction: column;
+    }
+
+    .about__image {
+        width: 100%;
+    }
+
+    .about__image img {
+        height: 62vh;
+    }
+
+    .about__information {
+        width: 100%;
+        margin-top: 20px;
+        padding-inline: 15px;
+    }
+
+    /* business */
+    .business__list-wrap {
+        flex-direction: column;
+        margin-inline: 0;
+        gap: 20px;
+    }
+
+    .business__left-list {
+        margin-top: 0;
+    }
+
+    .business__item:nth-of-type(1) {
+        margin-bottom: 20px;
+    }
+
+    /* company */
+    .company {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .company__information {
+        width: 100%;
+        padding-block: 50px;
+        padding-inline: 20px;
+    }
+
+    .company__information dl {
+        grid-template-columns: 1fr;
+    }
+
+    .company__information dd {
+        margin-left: 10px;
+    }
+
+    .company__image {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* footer */
+    .footer__inner {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .footer__inner address {
+        width: auto;
+    }
+}

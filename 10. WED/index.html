@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Web Entertainment Design</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__inner container">
+                <h1 class="site-logo">
+                    <a href="index.html"
+                        ><img src="img/logo.svg" alt="WED"
+                    /></a>
+                </h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#news">NEWS</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#business">BUSINESS</a></li>
+                        <li><a href="#company">COMPANY</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a class="header__inquiry" href="mailto:xxx@xxx.com"
+                >お問い合わせ</a
+            >
+        </header>
+
+        <div class="mainvisual">
+            <img src="img/mainvisual.jpg" alt="office" />
+        </div>
+
+        <main class="main">
+            <section class="news container" id="news">
+                <!-- h2の見出しのタグ内部でメインとサブにspanで分けることでセマンティック的にも正しくなる＋不要なdiv減らせる -->
+                <h2 class="section-title">
+                    <span class="section-title__main">NEWS</span>
+                    <span class="section-title__sub">ニュース</span>
+                </h2>
+                <ul class="news__card-wrap">
+                    <li class="news__card">
+                        <article>
+                            <a href="#">
+                                <!-- 見本サイトではtimeタグの中にspanだったが、timeタグは日時の意味を持つのでNEWSなどのタグ分けは不適切だと感じてdiv -->
+                                <div class="news__card-inner">
+                                    <time datetime="2021-01-01"
+                                        >2021.01.01</time
+                                    >
+                                    <p>NEWS</p>
+                                </div>
+                                <h3>タイトルタイトルタイトルタイトル</h3>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="news__card">
+                        <article>
+                            <a href="#">
+                                <div class="news__card-inner">
+                                    <time datetime="2021-01-01"
+                                        >2021.01.01</time
+                                    >
+                                    <p>PRESS</p>
+                                </div>
+                                <h3>タイトルタイトルタイトルタイトル</h3>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="news__card">
+                        <article>
+                            <a href="#">
+                                <div class="news__card-inner">
+                                    <time datetime="2021-01-01"
+                                        >2021.01.01</time
+                                    >
+                                    <p>NEWS</p>
+                                </div>
+                                <h3>タイトルタイトルタイトルタイトル</h3>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section class="about" id="about">
+                <div class="about__image">
+                    <img src="img/about.jpg" alt="PASSION LED US HERE" />
+                </div>
+                <div class="about__information">
+                    <h2 class="section-title">
+                        <span class="section-title__main">ABOUT</span>
+                        <span class="section-title__sub">私たちについて</span>
+                    </h2>
+                    <p>
+                        テキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキスト
+                    </p>
+                    <p>
+                        テキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキスト
+                    </p>
+                    <p>
+                        テキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキスト
+                    </p>
+                </div>
+            </section>
+            <section class="business container" id="business">
+                <h2 class="section-title">
+                    <span class="section-title__main">BUSINESS</span>
+                    <span class="section-title__sub">事業内容</span>
+                </h2>
+                <!-- <ul class="business__list">
+                    <li class="business__item">
+                        <p>Web制作・マーケティング</p>
+                        <img src="img/business1.jpg" alt="ビジネス内容画像1" />
+                    </li>
+                    <li class="business__item">
+                        <p>インターネットメディア事業</p>
+                        <img src="img/business2.jpg" alt="ビジネス内容画像2" />
+                    </li>
+                    <li class="business__item">
+                        <p>プロモーション企画・制作</p>
+                        <img src="img/business3.jpg" alt="ビジネス内容画像3" />
+                    </li>
+                    <li class="business__item">
+                        <p>ソーシャル企画・運営</p>
+                        <img src="img/business4.jpg" alt="ビジネス内容画像4" />
+                    </li>
+                </ul> -->
+                <div class="business__list-wrap">
+                    <div class="business__left-list">
+                        <div class="business__item">
+                            <p>Web制作・マーケティング</p>
+                            <img
+                                src="img/business1.jpg"
+                                alt="ビジネス内容画像1"
+                            />
+                        </div>
+                        <div class="business__item">
+                            <p>インターネットメディア事業</p>
+                            <img
+                                src="img/business2.jpg"
+                                alt="ビジネス内容画像2"
+                            />
+                        </div>
+                    </div>
+                    <div class="business__right-list">
+                        <div class="business__item">
+                            <p>プロモーション企画・制作</p>
+                            <img
+                                src="img/business3.jpg"
+                                alt="ビジネス内容画像3"
+                            />
+                        </div>
+                        <div class="business__item">
+                            <p>ソーシャル企画・運営</p>
+                            <img
+                                src="img/business4.jpg"
+                                alt="ビジネス内容画像4"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="company container" id="company">
+                <div class="company__information">
+                    <h2 class="section-title">
+                        <span class="section-title__main">COMPANY</span>
+                        <span class="section-title__sub">会社情報</span>
+                    </h2>
+                    <dl>
+                        <dt>会社名</dt>
+                        <dd>ウェブエンターテイメントデザイン株式会社</dd>
+                        <dt>所在地</dt>
+                        <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
+                        <dt>代表</dt>
+                        <dd>ＸＸＸＸＸＸ</dd>
+                        <dt>設立</dt>
+                        <dd>2021年1月1日</dd>
+                        <dt>資本金</dt>
+                        <dd>3,000,000円</dd>
+                        <dt>事業内容</dt>
+                        <dd>
+                            <!-- 文字の羅列ではなく、listで事業形態をリスト化 -->
+                            <ul>
+                                <li>Web制作・マーケティング</li>
+                                <li>インターネットメディア事業</li>
+                                <li>プロモーション企画・制作</li>
+                                <li>ソーシャル企画・運営</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="company__image">
+                    <img src="img/company.jpg" alt="会社情報の画像" />
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner container">
+                <div class="site-logo">
+                    <a href="index.html"
+                        ><img src="img/logo.svg" alt="WED"
+                    /></a>
+                </div>
+                <address>
+                    <p>Web Entertainment Design Inc.</p>
+                    <!-- GoogleMapでのURLを本来は表記してリンク先で表示できるようにすると良い -->
+                    <p>
+                        <a
+                            href="https://google.com東京都渋谷区桜丘町99-9 West Building 3F"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            West Building 3F<br />
+                            9-99 Sakuragaokacho Shibuya-ku Tokyo, Japan 150-0031
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:9999999999"> T/99-9999-9999 </a>
+                    </p>
+                </address>
+            </div>
+            <small class="container">
+                &copy; Web Entertainment Design Inc.
+            </small>
+        </footer>
+    </body>
+</html>

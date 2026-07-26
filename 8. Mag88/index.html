@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mag88</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="logo" />
+                </a>
+            </h1>
+        </header>
+
+        <main>
+            <section class="magazine-introduction">
+                <div class="magazine-introduction__header">
+                    <h2 class="section-title">
+                        A special, long article in a newspaper or magazine
+                    </h2>
+                    <p class="section-text">
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />
+                        テキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                </div>
+                <!-- 
+                ・解答例ではここで1section＋aタグ
+                ・解答例はとてもシンプル
+                ・自身の意図としては、どのようなmagazineやnewがあるのかを表すheaderの下にコンテンツが来るイメージだった
+                ・ulにしたのは、今後コンテンツが増えても問題なく同じレイアウトでcardにして増やしやすいと案じたから
+                ・自身のものは階層が深いということでSEO的にあまりよくないのかも？
+                 -->
+                <ul class="magazine-introduction__card-wrap inner">
+                    <li class="magazine-introduction__card">
+                        <a href="#">
+                            <img
+                                src="img/magazine-archive.jpg"
+                                alt="magazine-archive"
+                            />
+                            <div class="magazine-introduction__card-text">
+                                <h3>Archive</h3>
+                                <p>
+                                    テキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="magazine-introduction__card">
+                        <a href="#">
+                            <img
+                                src="img/magazine-new.jpg"
+                                alt="magazine-new"
+                            />
+                            <div class="magazine-introduction__card-text">
+                                <h3>New</h3>
+                                <p>
+                                    テキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="fashion">
+                <h2 class="section-title">Fashion & Style</h2>
+                <p class="section-text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />
+                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+                <a class="button" href="#"> Read More </a>
+            </section>
+
+            <!-- 
+            ・解答例ではsectionのdouble-column
+            ・自分ではsectionでcatalogとantiqueを分けて考え、レイアウトとしてdivで大きく囲った形にした。
+            ・この構成の違いはどのような違いもあるし、制作上でどのような違いも生まれるのか。
+            ・タグの使い方的には良いのか？
+            -->
+            <div class="showcase">
+                <section class="catalog showcase-layout inner">
+                    <div class="showcase-layout__img">
+                        <img src="img/catalog.jpg" alt="catalog" />
+                    </div>
+                    <div class="showcase-layout__text">
+                        <h2 class="section-title">Catalog</h2>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                </section>
+                <section class="antique showcase-layout inner">
+                    <div class="showcase-layout__text">
+                        <h2 class="section-title">Antique</h2>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <a class="button" href="#"> Read More </a>
+                    </div>
+                    <div class="showcase-layout__img">
+                        <img src="img/antique.jpg" alt="antique" />
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__body">
+                <div class="footer__inner inner">
+                    <div class="footer__logo">
+                        <img src="img/logo.svg" alt="logo" />
+                    </div>
+                    <div class="footer__content1">
+                        <h3>タイトル</h3>
+                        <ul>
+                            <li>テキストテキストテキスト</li>
+                            <li>テキストテキストテキスト</li>
+                            <li>テキストテキストテキスト</li>
+                            <li>テキストテキストテキスト</li>
+                            <li>テキストテキストテキスト</li>
+                        </ul>
+                    </div>
+                    <div class="footer__content2">
+                        <h3>タイトルタイトルタイトル</h3>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <small class="footer__copyright"> &copy; Mag88 </small>
+        </footer>
+    </body>
+</html>

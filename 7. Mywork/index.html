@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>My work</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.png" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="container">
+            <h1 class="header__logo">
+                <a href="index.html"
+                    ><img src="img/logo.svg" alt="My Work"
+                /></a>
+            </h1>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="img/Instagram_Glyph_Black.png"
+                                alt="instagram"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ここはひとつのmainvisualクラスの中にimgを二つ入れてCSSでdisplay:noneとblockで切り替え -->
+        <picture class="mainvisual">
+            <source srcset="img/mainvisual-sp.jpg" media="(max-width:500px)" />
+            <img src="img/mainvisual-pc.jpg" alt="PC用メインビジュアル" />
+        </picture>
+
+        <main class="container">
+            <section id="about" class="about">
+                <h2 class="section-title">About</h2>
+                <address>
+                    <p class="about__name">Xxxxx Ashley</p>
+                    <p>
+                        2th Floor xxxxx Building x-x-x Nishiazabu, Minato-ku,
+                        Tokyo 106-0031 Japan
+                    </p>
+                    <dl class="about__information">
+                        <dt>tel:</dt>
+                        <dd>000-0000-0000</dd>
+                        <dt>url:</dt>
+                        <!-- 実務ならばもしかしたらaタグを使用して<a href="https://www.xxxxx.jp">www.xxxxx.jp</a>かも -->
+                        <dd>www.xxxxx.jp</dd>
+                        <dt>mail:</dt>
+                        <!-- 実務なら<a href="mailto:xxx@xxxxxx.jp">xxx@xxxxxx.jp</a>としてメールフォームに飛ぶこともあるかも -->
+                        <dd>xxx@xxxxxx.jp</dd>
+                    </dl>
+                </address>
+                <p>
+                    プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストスト
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+            </section>
+            <section id="works" class="works">
+                <h2 class="section-title">Works</h2>
+                <ul>
+                    <li><img src="img/works1.jpg" alt="works1" /></li>
+                    <li><img src="img/works2.jpg" alt="works2" /></li>
+                    <li><img src="img/works3.jpg" alt="works3" /></li>
+                    <li><img src="img/works4.jpg" alt="works4" /></li>
+                    <li><img src="img/works5.jpg" alt="works5" /></li>
+                    <li><img src="img/works6.jpg" alt="works6" /></li>
+                </ul>
+            </section>
+            <section id="news" class="news">
+                <h2 class="section-title">News</h2>
+                <ul>
+                    <li>
+                        <article>
+                            <time datetime="2020-10-10">2020.XX.XX</time>
+                            <a href="#">
+                                デザイン雑誌「ＸＸＸＸＸＸ
+                                Vol.11』に掲載していただきました。
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <time>2020.XX.XX</time>
+                            <a href="#">
+                                ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <time>2020.XX.XX</time>
+                            <a href="#">
+                                【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <time>2020.XX.XX</time>
+                            <a href="#">
+                                デザイン雑誌「ＸＸＸＸＸＸ
+                                Vol.10』に掲載していただきました。
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <time>2020.XX.XX</time>
+                            <a href="#">
+                                【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section id="contact" class="contact">
+                <h2 class="section-title">Contact</h2>
+                <!-- dlを使用せずformのみで構成したコード -->
+                <form action="#" method="post">
+                    <div class="form__item">
+                        <label for="name">NAME</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                        />
+
+                    </div>
+                    <div class="form__item">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                        />
+                    </div>
+                    <div class="form__item">
+                        <label for="message">MESSAGE</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
+                    <!-- <button type="submit">送信</button> -->
+                     <input type="submit" value="送信">
+                </form>
+                <!-- 解答例を受けて自身のコードに当てはめて記述してみたコード：AI曰く少し古い構成 -->
+                <!-- <form action="#" method="post">
+                    <dl class="form__item">
+                        <dt>
+                            <label for="name">NAME</label>
+                        </dt>
+                        <dd>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                            />
+                        </dd>
+                    </dl>
+                    <dt>
+                        <label for="email">E-mail</label>
+                    </dt>
+                    <dd>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                        />
+                    </dd>
+                    <dt>
+                        <label for="message">MESSAGE</label>
+                    </dt>
+                    <dd>
+                        <textarea name="message" id="message"></textarea>
+                    </dd>
+                    <button type="submit">送信</button>
+                </form> -->
+            </section>
+        </main>
+
+        <footer>
+            <small>&copy; 2020 My Work</small>
+        </footer>
+    </body>
+</html>

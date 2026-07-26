@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Travel Blog</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Travel Blog" />
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">COLUMN</a></li>
+                    <li><a href="#">SERIES</a></li>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="mailto:namename@example.co.jp">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="pickup-article">
+                <article class="pickup-article__item">
+                    <div class="pickup-article__image">
+                        <img src="img/pickup1.jpg" alt="pickup1記事画像" />
+                    </div>
+                    <h2>
+                        タイトルテキストテキストテキストテキストテキストテキストテキスト
+                    </h2>
+                    <a href="#">READ MORE</a>
+                </article>
+                <article class="pickup-article__item">
+                    <div class="pickup-article__image">
+                        <img src="img/pickup2.jpg" alt="pickup2記事画像" />
+                    </div>
+                    <h2>
+                        タイトルテキストテキストテキストテキストテキストテキストテキスト
+                    </h2>
+                    <a href="#">READ MORE</a>
+                </article>
+                <article class="pickup-article__item">
+                    <div class="pickup-article__image">
+                        <img src="img/pickup3.jpg" alt="pickup3記事画像" />
+                    </div>
+                    <h2>
+                        タイトルテキストテキストテキストテキストテキストテキストテキスト
+                    </h2>
+                    <a href="#" class="article-read-button">READ MORE</a>
+                </article>
+            </div>
+
+            <!-- asideタグとの配置についてはgridレイアウトをmainに指定して配置したほうがSPのレスポンシブなどでも配置転換がしやすく、divも減らせると思うので、asideと一緒に囲むdivはなし -->
+            <div class="main-article">
+                <article class="main-article__item">
+                    <a href="#" class="main-article__link">
+                        <h2>
+                            タイトルテキストテキストテキストテキストテキスト
+                        </h2>
+                        <div class="main-article__date">
+                            <time datetime="2020-01-01">2020/01/01</time>
+                            <p>カテゴリ1</p>
+                        </div>
+                        <div class="main-article__image">
+                            <img src="img/main1.jpg" alt="main1記事画像" />
+                        </div>
+                    </a>
+                    <p>
+                        本文テキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                    <a href="#" class="article-read-button">READ MORE</a>
+                </article>
+                <article class="main-article__item">
+                    <a href="#" class="main-article__link">
+                        <h2>
+                            タイトルテキストテキストテキストテキストテキスト
+                        </h2>
+                        <div class="main-article__date">
+                            <time datetime="2020-01-01">2020/01/01</time>
+                            <p>カテゴリ1</p>
+                        </div>
+                        <div class="main-article__image">
+                            <img src="img/main2.jpg" alt="main2記事画像" />
+                        </div>
+                    </a>
+                    <p>
+                        本文テキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                    <a href="#" class="article-read-button">READ MORE</a>
+                </article>
+                <article class="main-article__item">
+                    <a href="#" class="main-article__link">
+                        <h2>
+                            タイトルテキストテキストテキストテキストテキスト
+                        </h2>
+                        <div class="main-article__date">
+                            <time datetime="2020-01-01">2020/01/01</time>
+                            <p>カテゴリ1</p>
+                        </div>
+                        <div class="main-article__image">
+                            <img src="img/main3.jpg" alt="main3記事画像" />
+                        </div>
+                    </a>
+                    <p>
+                        本文テキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                    <a href="#" class="article-read-button">READ MORE</a>
+                </article>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar__self-introduction">
+                    <div class="sidebar__self-introduction-image">
+                        <img src="img/author.jpg" alt="作者の写真" />
+                    </div>
+                    <!-- ここのクラス名が、他のsidebar内部の見出しと同じfont-sizeなので共通クラス名にしたいが…headingではnameとのずれが合うので悩み -->
+                    <h3 sidebar__name>Name Name</h3>
+                    <p>
+                        プロフィールテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                </div>
+                <section class="sidebar__ranking-article">
+                    <h3 class="sidebar__heading">Ranking</h3>
+                    <article class="sidebar__ranking-item">
+                        <div class="sidebar__ranking-image">
+                            <img
+                                src="img/ranking1.jpg"
+                                alt="ranking1記事画像"
+                            />
+                        </div>
+                        <h4 class="sidebar__ranking-heading">
+                            タイトルテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </article>
+                    <article class="sidebar__ranking-item">
+                        <div class="sidebar__ranking-image">
+                            <img
+                                src="img/ranking2.jpg"
+                                alt="ranking2記事画像"
+                            />
+                        </div>
+                        <h4 class="ranking-article__heading">
+                            タイトルテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </article>
+                    <article class="sidebar__ranking-item">
+                        <div class="sidebar__ranking-image">
+                            <img
+                                src="img/ranking3.jpg"
+                                alt="ranking3記事画像"
+                            />
+                        </div>
+                        <h4 class="sidebar__ranking-heading">
+                            タイトルテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </article>
+                </section>
+                <section class="sidebar__archive">
+                    <h3 sidebar__heading>Archive</h3>
+                    <ul>
+                        <!-- ここは調べているとPHPで自動的に年月日を取得して追加する手法などもある様子、WordPressではそのように実装するのかも -->
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                <section class="footer__about">
+                    <h3 class="footer__section-title">About</h3>
+                    <p>
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                    <ul>
+                        <li><a href="#">プロフィール詳細</a></li>
+                        <li><a href="#">お仕事の依頼</a></li>
+                        <li>
+                            <a href="mailto:namename@example.co.jp">
+                                お問い合わせ
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer__menu">
+                    <h3 class="footer__section-title">Menu</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">NEW</a></li>
+                            <li><a href="#">COLUMN</a></li>
+                            <li><a href="#">SERIES</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer__sns-introduction">
+                    <h3 class="footer__section-title">Youtube</h3>
+                    <!-- ここのwidthはiframeに対してCSSでwidth:100%;を指定し、heightのみで300pxnなど高さのみ指定すると親要素に合わせて幅が変化できる -->
+                    <iframe
+                        height="315"
+                        src="https://www.youtube.com/embed/r4K7b1Z6Lh4?si=JmUSqk4HNxoOrFH6"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share;
+                        "
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </section>
+            </div>
+            <small> &copy; Travel & Blog </small>
+        </footer>
+    </body>
+</html>

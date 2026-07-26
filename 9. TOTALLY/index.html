@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>TOTALLY</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <!-- googleフォントでフォントを選んでみましょう！ -->
+        <!-- フォントの内容を読み込みすぎのため。対象のフォントだけを読み込むようにすべきだった -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:opsz,wght@14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo.svg" alt="TOTALLY" />
+                </a>
+            </div>
+            <nav class="header__nav container">
+                <ul>
+                    <li>
+                        <a href="#">ALL</a>
+                    </li>
+                    <li>
+                        <a href="#">NEW</a>
+                    </li>
+                    <li>
+                        <a href="#">VINTAGE</a>
+                    </li>
+                    <li>
+                        <a href="#">CATEGORY</a>
+                    </li>
+                    <li>
+                        <a href="#">LOOKBOOK</a>
+                    </li>
+                    <li>
+                        <a href="#">BLOG</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/login">LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- mainタグにレイアウトを行うためのclass名を付けていたが、今回の内容ではarticleで独立したアイテムの商品部分なので、記事として独立して別のページにできることからarticleタグが良い -->
+            <article class="product container">
+                <div class="product__image">
+                    <img src="img/item.jpg" alt="TOTALLY Short Sleeve Shirt" />
+                </div>
+                <div class="product__information">
+                    <h1>TOTALLY Short Sleeve Shirt</h1>
+                    <p>
+                        テキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキスト
+                    </p>
+                    <p class="product__price">￥9,999 +tax</p>
+                    <form class="product__form" action="#" method="post">
+                        <table>
+                            <!-- tableタグの列に対して幅や背景色などのスタイルを指定をするときに用いることができるタグ -->
+                            <colgroup>
+                                <col span="1" class="col-color" />
+                                <col span="1" class="col-size" />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Color</th>
+                                    <th>Size</th>
+                                    <th>
+                                        <!-- selectタグ見出し部分
+                                         の空白 -->
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>White</td>
+                                    <td>S</td>
+                                    <td>
+                                        <!-- selectの部分でformでのPOSTを考えるとnameはSMLで分けると良かった
+                                         元<select name="order-quantity"> 
+                                          -->
+                                        <select name="order-quantity_s">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>White</td>
+                                    <td>M</td>
+                                    <td>
+                                        <!-- selectの部分でformでのPOSTを考えるとnameはSMLで分けると良かった
+                                        元<select name="order-quantity">
+                                          -->
+                                        <select name="order-quantity_m">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>White</td>
+                                    <td>L</td>
+                                    <td>
+                                        <!-- selectの部分でformでのPOSTを考えるとnameはSMLで分けると良かった
+                                        元<select name="order-quantity" >
+                                         -->
+                                        <select name="order-quantity_l">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" value="ADD TO CART" />
+                    </form>
+                    <table class="product__detail">
+                        <thead>
+                            <tr>
+                                <!-- scope="col"はこのthは列の見出しであることを示す -->
+                                <th scope="col">Size</th>
+                                <th scope="col">Chest</th>
+                                <th scope="col">Weist</th>
+                                <th scope="col">Height</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- scope="row"は行の見出しであることを示す -->
+                                <th scope="row">S</th>
+                                <td>99 ~ 99</td>
+                                <td>99 ~ 99</td>
+                                <td>99 ~ 99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">M</th>
+                                <td>99 ~ 99</td>
+                                <td>99 ~ 99</td>
+                                <td>99 ~ 99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">L</th>
+                                <td>99 ~ 99</td>
+                                <td>99 ~ 99</td>
+                                <td>99 ~ 99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer container">
+            <small> &copy; TOTALLY </small>
+        </footer>
+    </body>
+</html>

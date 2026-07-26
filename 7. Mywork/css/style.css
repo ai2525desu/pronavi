@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 120px;
+}
+
+.container {
+    max-width: 1000px;
+    /* ％でコンテナの幅を指定しようとしたが、レスポンシブなどを考えるとpadding-inlineで両サイドの余白をox管理する形でもよかった */
+    width: 75%;
+    margin-inline: auto;
+}
+
+.header__logo {
+    width: 120px;
+    height: 36px;
+}
+
+.header__logo a {
+    text-decoration: none;
+    border: none;
+}
+
+.header__logo a:hover {
+    opacity: 0.5;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+
+.header__nav ul li a:hover {
+    opacity: 0.5;
+}
+
+.header__nav ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+.mainvisual {
+    display: block;
+    /* 不要（60vhで縦幅基準にしたため）overflow: hidden; */
+}
+
+.mainvisual img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+section {
+    /* HTMLは下から積まれるのでmargin-bottomでもよかった */
+    margin-top: 100px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.about {
+    font-size: 0.9rem;
+}
+
+.about__name {
+    margin-bottom: 20px;
+}
+
+address dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 20px;
+}
+
+.works ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.works ul li img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.news li {
+    border-bottom: 1px solid #a9a9a9;
+}
+
+.news li:first-child {
+    border-top: 1px solid #a9a9a9;
+}
+
+.news article {
+    font-size: 0.8rem;
+    display: flex;
+    padding-block: 16px;
+}
+
+.news time {
+    width: 20%;
+}
+
+.news a {
+    width: 80%;
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+
+.form__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form__item label {
+    width: 15%;
+    font-size: 0.9rem;
+}
+
+/* inputとtextareaで共通事項が多いので、CSSをまとめて指定する部分はまとめたほうが良かった */
+.form__item input {
+    width: 85%;
+    border: 1px solid #a9a9a9;
+    height: 40px;
+}
+
+.form__item textarea {
+    width: 85%;
+    height: 150px;
+    border: 1px solid #a9a9a9;
+}
+
+form button {
+    display: block;
+    text-align: center;
+    margin-inline: auto;
+    color: white;
+    background-color: #24292e;
+    padding: 15px 80px;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background-color: white;
+    color: #24292e;
+    border: 1px solid #24292e;
+}
+
+footer {
+    background-color: #24292e;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    padding-block: 10px;
+}
+
+footer small {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        padding-block: 60px;
+    }
+
+    .works ul {
+        grid-template-columns: 1fr;
+    }
+
+    .news article {
+        flex-direction: column;
+    }
+
+    .news time {
+        width: 100%;
+    }
+
+    .news a {
+        width: 100%;
+    }
+
+    .form__item {
+        flex-direction: column;
+    }
+
+    .form__item input {
+        width: 100%;
+    }
+
+    .form__item textarea {
+        width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+@use "variables";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: variables.$font-family-base;
+    color: variables.$color-text;
+}
+
+img {
+    max-width: 100%;
+    // coverはbaseではなく共通の処理として要素にして一されることが多いので、各要素のimgに指定するほうが良いかも
+    // object-fit: cover;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,8 +1,17 @@
+// 各SCSSファイルをCSSへまとめる入口=style.scss
+// 最終的にCSSとして出力したいSCSSファイルをここで@useする
+// 下記は日本語の文字化け防止のため、Scssでは記述必須
+@charset "UTF-8";
+
+// 下記2つは他のファイルで使用する内容（値、レスポンシブ等）を記述するもの。他の.scssで使用するときに各.scssで@useするもの
+// 大元のstyle.scssに記述したからと言ってすべてのファイルで最初から有効になっているわけではないもので、基本的にstyle.scssに記述する必要はない
+// 判断基準としては、最終的にｃｓｓファイルに記述する必要のあるものはここで@useする
+
 // サイト全体で共通のfontやcolorを変数化して値のみを定義（デザイン設定ファイル）variables=変数
-@use "common/variables";
+// @use "common/variables";
 
 // レスポンシブの記述
-@use "common/mixin";
+// @use "common/mixin";
 
 // サイト全体で共通になるbodyタグやimgタグなどのタグに対する初期スタイル指定を記述
 @use "common/base";

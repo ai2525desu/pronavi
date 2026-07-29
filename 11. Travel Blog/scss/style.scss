@@ -1,0 +1,16 @@
+// サイト全体で共通のfontやcolorを変数化して値のみを定義（デザイン設定ファイル）variables=変数
+@use "common/variables";
+
+// レスポンシブの記述
+@use "common/mixin";
+
+// サイト全体で共通になるbodyタグやimgタグなどのタグに対する初期スタイル指定を記述
+@use "common/base";
+
+// 様々な箇所で使用する共通のクラス名等に対するレイアウト指定の記述
+@use "common/global";
+
+// 下記は各部分の記述（初めてなのでディレクトリ分けまでせずにまずは内容の記述になれることを重視）
+@use "layouts/header";
+@use "layouts/main";
+@use "layouts/footer";

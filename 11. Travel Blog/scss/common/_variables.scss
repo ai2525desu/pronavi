@@ -1,2 +1,6 @@
-$font-family-base:"Noto Sans", sans-serif;
+// サイト全体の主要フォント
+$font-family-base: "Noto Sans", sans-serif;
+// 文字色を変数化
 $color-text: #333;
+// nav背景やREAD MOREリンクの下線などの主要カラーとして使用する意味の変数化
+$color-primary: #333;

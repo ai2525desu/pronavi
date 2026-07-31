@@ -1,0 +1,10 @@
+// スマホのレスポンシブを設定したいpxの値を代入
+$sp: 500px;
+
+// mixinとして、sp＝スマホのレスポンシブを表記
+@mixin sp {
+    @media (max-width:($sp)) {
+        // content部分にはそれぞれの内容が入る
+        @content
+    }
+}

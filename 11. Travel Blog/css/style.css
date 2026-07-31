@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 100%;
 }
@@ -9,16 +10,43 @@ body {
 
 img {
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   vertical-align: bottom;
 }
 
 a {
   text-decoration: none;
+  color: #333;
+  font-size: 0.875rem;
 }
 
 ul {
   list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.article-read-more {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+.article-read-more::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1; /* 最初は表示 */
+}
+.article-read-more:hover::after {
+  opacity: 0;
+  transform: translateY(3px); /* 下へ移動しながら消える */
 }
 /*# sourceMappingURL=style.css.map */

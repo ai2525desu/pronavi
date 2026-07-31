@@ -22,6 +22,21 @@
 
     <body>
         <header class="header">
+            <!--
+            ・containerはページ全体の横幅(max-width)と中央配置を管理する共通レイアウト。header__logoはヘッダー内のロゴ表示領域を管理する。
+            ・今回はheader__logo自身にcontainerを付与する設計を採用。
+            ・containerのpaddingをheader__logo側で調整することで、ヘッダー独自の上下余白を設定している。
+
+            ・別案としてcontainerを親要素に分離し、
+            container=横幅管理、header__logo=ロゴ管理と責務を完全に分ける方法もあり、そちらの方が個人的にはやりやすかった。ただし、その場合はHTMLの入れ子が増えるため、今回シンプルさを考慮してdivのない構造を採用。
+            <div class="container">
+                <h1 class="header__logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Travel Blog" />
+                    </a>
+                </h1>
+            </div>
+            -->
             <h1 class="header__logo container">
                 <a href="index.html">
                     <img src="img/logo.svg" alt="Travel Blog" />

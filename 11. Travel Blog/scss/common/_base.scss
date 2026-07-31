@@ -11,8 +11,8 @@ body {
 
 img {
     max-width: 100%;
-    // coverはbaseではなく共通の処理として要素にして一されることが多いので、各要素のimgに指定するほうが良いかも
-    // object-fit: cover;
+    // coverはbaseではなく共通の処理として要素に指定されることが多いので、各要素のimgに指定するほうが良いかも
+    object-fit: cover;
     vertical-align: bottom;
 }
 

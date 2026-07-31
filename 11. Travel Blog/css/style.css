@@ -10,6 +10,8 @@ body {
 
 img {
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: bottom;
 }
 
@@ -48,5 +50,10 @@ ul {
 .article-read-more:hover::after {
   opacity: 0;
   transform: translateY(3px); /* 下へ移動しながら消える */
+}
+
+.header__logo {
+  padding: 20px 16px;
+  line-height: 1;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+.header {
+    // divで別途containerを指定してcontainerとheader__logoの責務を分ける方法。これだと、containerは中央寄せと横幅のinline部分だけの指定をしているので他のmainの内容やfooterのcontainerとどうように責務がわかりやすい。
+    // しかし、そうするとdivが増えて構造は入れ子が増える
+    // &__logo {
+    //     width: 145px;
+    //     height: 35px;
+    //     margin-block: 20px;
+    //     line-height: 1;
+    // }
+    &__logo {
+        // ここでpaddingで調整することでcontainerのmax-widthのみ活かしてpaddingを上書きしている
+        padding: 20px 16px;
+        line-height: 1;
+    }
+}

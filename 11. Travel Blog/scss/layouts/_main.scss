@@ -1,0 +1,14 @@
+@use "../common/variables";
+@use "../common/mixin" as m;
+
+.pickup-article {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    &__title {
+        font-size: 1rem;
+        margin-block: 16px;
+    }
+}

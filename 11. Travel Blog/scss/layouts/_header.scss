@@ -1,4 +1,12 @@
+@use "../common/variables";
+@use "../common/mixin" as m;
+
 .header {
+    position: sticky;
+    top: 0;
+    height: 114px;
+    // ここでheaderに背景色を設定しないと画像などのコンテンツの内容が背景に透ける
+    background-color: variables.$color-white;
     // divで別途containerを指定してcontainerとheader__logoの責務を分ける方法。これだと、containerは中央寄せと横幅のinline部分だけの指定をしているので他のmainの内容やfooterのcontainerとどうように責務がわかりやすい。
     // しかし、そうするとdivが増えて構造は入れ子が増える
     // &__logo {
@@ -11,5 +19,25 @@
         // ここでpaddingで調整することでcontainerのmax-widthのみ活かしてpaddingを上書きしている
         padding: 20px 16px;
         line-height: 1;
+    }
+    &__nav {
+        background-color: variables.$color-primary;
+        @include m.sp {
+            overflow-x: scroll;
+        }
+        ul {
+            display: flex;
+            gap: 60px;
+            padding-block: 10px;
+        }
+        // gapで対応したときにcontactの右側の60px分のpaddingがなかったのでスマホのみレスポンシブでpadding-rightを追加
+        li:last-child {
+            @include m.sp {
+                padding-right: 60px;
+            }
+        }
+        a {
+            color: variables.$color-white;
+        }
     }
 }

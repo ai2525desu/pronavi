@@ -52,8 +52,36 @@ ul {
   transform: translateY(3px); /* 下へ移動しながら消える */
 }
 
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 114px;
+  background-color: #fff;
+}
 .header__logo {
   padding: 20px 16px;
   line-height: 1;
+}
+.header__nav {
+  background-color: #333;
+}
+@media (max-width: 500px) {
+  .header__nav {
+    overflow-x: scroll;
+  }
+}
+.header__nav ul {
+  display: flex;
+  gap: 60px;
+  padding-block: 10px;
+}
+@media (max-width: 500px) {
+  .header__nav li:last-child {
+    padding-right: 60px;
+  }
+}
+.header__nav a {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

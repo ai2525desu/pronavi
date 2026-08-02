@@ -1,12 +1,12 @@
-@use "variables";
+@use "variables" as *;
 
 html {
     font-size: 100%;
 }
 
 body {
-    font-family: variables.$font-family-base;
-    color: variables.$color-text;
+    font-family: $font-family-base;
+    color: $color-text;
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 
 a {
     text-decoration: none;
-    color: variables.$color-text;
+    color: $color-text;
     font-size: 0.875rem;
 }
 

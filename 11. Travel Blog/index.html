@@ -23,12 +23,14 @@
     <body>
         <header class="header">
             <!--
-            ・containerはページ全体の横幅(max-width)と中央配置を管理する共通レイアウト。header__logoはヘッダー内のロゴ表示領域を管理する。
-            ・今回はheader__logo自身にcontainerを付与する設計を採用。
-            ・containerのpaddingをheader__logo側で調整することで、ヘッダー独自の上下余白を設定している。
-
-            ・別案としてcontainerを親要素に分離し、
-            container=横幅管理、header__logo=ロゴ管理と責務を完全に分ける方法もあり、そちらの方が個人的にはやりやすかった。ただし、その場合はHTMLの入れ子が増えるため、今回シンプルさを考慮してdivのない構造を採用。
+                ・解答例ではcontainerのpaddingをheader__logo側で調整することで、ヘッダー独自の上下余白を設定している。
+                <h1 class="header__logo container">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Travel Blog" />
+                    </a>
+                </h1>
+                ・containerはページ全体の横幅(max-width)と中央配置を管理する共通レイアウト。header__logoはヘッダー内のロゴ表示領域を管理する。
+            -->
             <div class="container">
                 <h1 class="header__logo">
                     <a href="index.html">
@@ -36,12 +38,6 @@
                     </a>
                 </h1>
             </div>
-            -->
-            <h1 class="header__logo container">
-                <a href="index.html">
-                    <img src="img/logo.svg" alt="Travel Blog" />
-                </a>
-            </h1>
             <nav class="header__nav">
                 <ul class="container">
                     <li><a href="#">NEW</a></li>
@@ -53,38 +49,38 @@
             </nav>
         </header>
 
-        <main>
-            <div class="pickup-article container">
-                <article class="pickup-article__item">
-                    <div class="pickup-article__image">
-                        <img src="img/pickup1.jpg" alt="pickup1記事画像" />
-                    </div>
-                    <h2 class="pickup-article__title">
-                        タイトルテキストテキストテキストテキストテキストテキストテキスト
-                    </h2>
-                    <a href="#" class="article-read-more">READ MORE</a>
-                </article>
-                <article class="pickup-article__item">
-                    <div class="pickup-article__image">
-                        <img src="img/pickup2.jpg" alt="pickup2記事画像" />
-                    </div>
-                    <h2 class="pickup-article__title">
-                        タイトルテキストテキストテキストテキストテキストテキストテキスト
-                    </h2>
-                    <a href="#" class="article-read-more">READ MORE</a>
-                </article>
-                <article class="pickup-article__item">
-                    <div class="pickup-article__image">
-                        <img src="img/pickup3.jpg" alt="pickup3記事画像" />
-                    </div>
-                    <h2 class="pickup-article__title">
-                        タイトルテキストテキストテキストテキストテキストテキストテキスト
-                    </h2>
-                    <a href="#" class="article-read-more">READ MORE</a>
-                </article>
-            </div>
+        <div class="pickup-article container">
+            <article class="pickup-article__item">
+                <div class="pickup-article__image">
+                    <img src="img/pickup1.jpg" alt="pickup1記事画像" />
+                </div>
+                <h2 class="pickup-article__title">
+                    タイトルテキストテキストテキストテキストテキストテキストテキスト
+                </h2>
+                <a href="#" class="article-read-more">READ MORE</a>
+            </article>
+            <article class="pickup-article__item">
+                <div class="pickup-article__image">
+                    <img src="img/pickup2.jpg" alt="pickup2記事画像" />
+                </div>
+                <h2 class="pickup-article__title">
+                    タイトルテキストテキストテキストテキストテキストテキストテキスト
+                </h2>
+                <a href="#" class="article-read-more">READ MORE</a>
+            </article>
+            <article class="pickup-article__item">
+                <div class="pickup-article__image">
+                    <img src="img/pickup3.jpg" alt="pickup3記事画像" />
+                </div>
+                <h2 class="pickup-article__title">
+                    タイトルテキストテキストテキストテキストテキストテキストテキスト
+                </h2>
+                <a href="#" class="article-read-more">READ MORE</a>
+            </article>
+        </div>
 
-            <div class="main-layout container">
+        <div class="main-layout container">
+            <main>
                 <div class="main-article">
                     <article class="main-article__item">
                         <a href="#" class="main-article__link">
@@ -147,81 +143,79 @@
                         <a href="#" class="article-read-more">READ MORE</a>
                     </article>
                 </div>
-
-                <aside class="sidebar">
-                    <div class="sidebar__self-introduction">
-                        <div class="sidebar__self-introduction-image">
-                            <img src="img/author.jpg" alt="作者の写真" />
-                        </div>
-                        <h3 class="sidebar__self-introduction-name">
-                            Name Name
-                        </h3>
-                        <p class="sidebar__self-introduction-text">
-                            プロフィールテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
+            </main>
+            <!-- asideタグはmainと同等の扱いをする必要がある -->
+            <aside class="sidebar">
+                <div class="sidebar__self-introduction">
+                    <div class="sidebar__self-introduction-image">
+                        <img src="img/author.jpg" alt="作者の写真" />
                     </div>
-                    <section class="sidebar__ranking-article">
-                        <h3 class="sidebar__heading">Ranking</h3>
-                        <article class="sidebar__ranking-item">
-                            <div class="sidebar__ranking-image">
-                                <img
-                                    src="img/ranking1.jpg"
-                                    alt="ranking1記事画像"
-                                />
-                            </div>
-                            <h4 class="sidebar__ranking-heading">
-                                タイトルテキストテキストテキストテキストテキストテキスト
-                            </h4>
-                        </article>
-                        <article class="sidebar__ranking-item">
-                            <div class="sidebar__ranking-image">
-                                <img
-                                    src="img/ranking2.jpg"
-                                    alt="ranking2記事画像"
-                                />
-                            </div>
-                            <h4 class="sidebar__ranking-heading">
-                                タイトルテキストテキストテキストテキストテキストテキスト
-                            </h4>
-                        </article>
-                        <article class="sidebar__ranking-item">
-                            <div class="sidebar__ranking-image">
-                                <img
-                                    src="img/ranking3.jpg"
-                                    alt="ranking3記事画像"
-                                />
-                            </div>
-                            <h4 class="sidebar__ranking-heading">
-                                タイトルテキストテキストテキストテキストテキストテキスト
-                            </h4>
-                        </article>
-                    </section>
-                    <section class="sidebar__archive">
-                        <h3 class="sidebar__heading">Archive</h3>
-                        <ul class="sidebar__archive-list">
-                            <!-- ここは調べているとPHPで自動的に年月日を取得して追加する手法などもある様子、WordPressではそのように実装するのかも -->
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                            <li><a href="#">XXXX年XX月(XX)</a></li>
-                        </ul>
-                    </section>
-                </aside>
-            </div>
-        </main>
+                    <h3 class="sidebar__self-introduction-name">Name Name</h3>
+                    <p class="sidebar__self-introduction-text">
+                        プロフィールテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
+                </div>
+                <section class="sidebar__ranking-article">
+                    <h3 class="sidebar__heading">Ranking</h3>
+                    <article class="sidebar__ranking-item">
+                        <div class="sidebar__ranking-image">
+                            <img
+                                src="img/ranking1.jpg"
+                                alt="ranking1記事画像"
+                            />
+                        </div>
+                        <h4 class="sidebar__ranking-heading">
+                            タイトルテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </article>
+                    <article class="sidebar__ranking-item">
+                        <div class="sidebar__ranking-image">
+                            <img
+                                src="img/ranking2.jpg"
+                                alt="ranking2記事画像"
+                            />
+                        </div>
+                        <h4 class="sidebar__ranking-heading">
+                            タイトルテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </article>
+                    <article class="sidebar__ranking-item">
+                        <div class="sidebar__ranking-image">
+                            <img
+                                src="img/ranking3.jpg"
+                                alt="ranking3記事画像"
+                            />
+                        </div>
+                        <h4 class="sidebar__ranking-heading">
+                            タイトルテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </article>
+                </section>
+                <section class="sidebar__archive">
+                    <h3 class="sidebar__heading">Archive</h3>
+                    <ul class="sidebar__archive-list">
+                        <!-- ここは調べているとPHPで自動的に年月日を取得して追加する手法などもある様子、WordPressではそのように実装するのかも -->
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                        <li><a href="#">XXXX年XX月(XX)</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
 
         <footer class="footer">
             <div class="footer__inner container">

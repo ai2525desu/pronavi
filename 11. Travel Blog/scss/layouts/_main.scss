@@ -2,7 +2,8 @@
 @use "../common/mixin" as m;
 
 .pickup-article {
-    margin-top: 40px;
+    // header固定文134px分＋margin-topで指定したい40pxの合計値
+    margin-top: 174px;
     margin-bottom: 70px;
     display: flex;
     justify-content: space-between;

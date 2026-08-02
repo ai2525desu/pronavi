@@ -1,27 +1,29 @@
-@use "../common/variables";
+@use "../common/variables" as *;
 @use "../common/mixin" as m;
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     height: 114px;
     // ここでheaderに背景色を設定しないと画像などのコンテンツの内容が背景に透ける
-    background-color: variables.$color-white;
+    background-color: $color-white;
+    // READ MOREボタンがheaderを固定表示にして背景色を指定しても透けていたので、最前面にheaderが出るように指定した
+    z-index: 10;
     // divで別途containerを指定してcontainerとheader__logoの責務を分ける方法。これだと、containerは中央寄せと横幅のinline部分だけの指定をしているので他のmainの内容やfooterのcontainerとどうように責務がわかりやすい。
-    // しかし、そうするとdivが増えて構造は入れ子が増える
-    // &__logo {
-    //     width: 145px;
-    //     height: 35px;
-    //     margin-block: 20px;
-    //     line-height: 1;
-    // }
     &__logo {
-        // ここでpaddingで調整することでcontainerのmax-widthのみ活かしてpaddingを上書きしている
-        padding: 20px 16px;
+        width: 145px;
+        height: 35px;
+        margin-block: 20px;
         line-height: 1;
     }
+    // &__logo {
+    //     // ここでpaddingで調整することでcontainerのmax-widthのみ活かしてpaddingを上書きしている
+    //     padding: 20px 16px;
+    //     line-height: 1;
+    // }
     &__nav {
-        background-color: variables.$color-primary;
+        background-color: $color-primary;
         @include m.sp {
             overflow-x: scroll;
         }
@@ -31,13 +33,15 @@
             padding-block: 10px;
         }
         // gapで対応したときにcontactの右側の60px分のpaddingがなかったのでスマホのみレスポンシブでpadding-rightを追加
-        li:last-child {
-            @include m.sp {
-                padding-right: 60px;
+        li {
+            &:last-child {
+                @include m.sp {
+                    padding-right: 60px;
+                }
             }
         }
         a {
-            color: variables.$color-white;
+            color: $color-white;
         }
     }
 }

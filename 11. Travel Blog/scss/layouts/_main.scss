@@ -13,3 +13,32 @@
         margin-block: 16px;
     }
 }
+
+.main-article {
+    width: 67%;
+
+    &__item {
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    &__date {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__image {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        width: 93%;
+        margin-inline: auto;
+        margin-bottom: 30px;
+    }
+}

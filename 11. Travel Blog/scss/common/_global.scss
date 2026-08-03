@@ -27,10 +27,16 @@
         opacity: 1; /* 最初は表示 */
     }
 
-    &:hover{
+    &:hover {
         &::after {
             opacity: 0;
             transform: translateY(3px); /* 下へ移動しながら消える */
         }
     }
+}
+
+// main-articleとasideのレイアウト用
+.content {
+    display: flex;
+    gap: 50px;
 }

@@ -1,0 +1,61 @@
+@use "../common/variables";
+@use "../common/mixin" as m;
+
+.sidebar {
+    width: 33%;
+
+    &__item {
+        margin-bottom: 60px;
+    }
+
+    // self-introduction
+    &__self-introduction-image {
+        width: 130px;
+        height: 130px;
+        margin-inline: auto;
+        margin-bottom: 30px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__self-introduction-name,
+    &__heading {
+        font-size: 1.125rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__self-introduction-text {
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+    }
+
+    // ranking
+    &__ranking-item {
+        margin-bottom: 30px;
+    }
+
+    &__ranking-image {
+        margin-bottom: 5px;
+    }
+
+    &__ranking-heading {
+        font-weight: 400;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+    }
+
+    // archive
+    &__archive-list {
+        li {
+            padding: 20px;
+            border-top: 1px solid #333;
+
+            &:last-child {
+                border-bottom: 1px solid #333;
+            }
+        }
+    }
+}

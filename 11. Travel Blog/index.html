@@ -217,14 +217,14 @@
 
         <footer class="footer">
             <div class="footer__inner container">
-                <section class="footer__about">
+                <section class="footer__section">
                     <h3 class="footer__section-title">About</h3>
-                    <p>
+                    <p class="footer__about-text">
                         テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                         テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                         テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </p>
-                    <ul>
+                    <ul class="footer__about-list">
                         <li><a href="#">プロフィール詳細</a></li>
                         <li><a href="#">お仕事の依頼</a></li>
                         <li>
@@ -234,9 +234,9 @@
                         </li>
                     </ul>
                 </section>
-                <section class="footer__menu">
+                <section class="footer__section">
                     <h3 class="footer__section-title">Menu</h3>
-                    <nav>
+                    <nav class="footer__menu-nav">
                         <ul>
                             <li><a href="#">NEW</a></li>
                             <li><a href="#">COLUMN</a></li>
@@ -245,10 +245,11 @@
                         </ul>
                     </nav>
                 </section>
-                <section class="footer__sns-introduction">
+                <section class="footer__section">
                     <h3 class="footer__section-title">Youtube</h3>
                     <!-- ここのwidthはiframeに対してCSSでwidth:100%;を指定し、heightのみで300pxnなど高さのみ指定すると親要素に合わせて幅が変化できる -->
                     <iframe
+                        width="100%"
                         height="315"
                         src="https://www.youtube.com/embed/r4K7b1Z6Lh4?si=JmUSqk4HNxoOrFH6"
                         title="YouTube video player"

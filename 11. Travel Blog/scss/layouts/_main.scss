@@ -1,6 +1,7 @@
-@use "../common/variables";
+@use "../common/variables" as *;
 @use "../common/mixin" as m;
 
+//  トップページのメインコンテンツ周辺
 .pickup-article {
     // header固定文134px分＋margin-topで指定したい40pxの合計値
     margin-top: 174px;
@@ -14,8 +15,10 @@
     }
 }
 
+// main-article
 .main-article {
-    width: 67%;
+    // width: 67%;
+    flex: 2.6;
 
     &__item {
         margin-bottom: 80px;

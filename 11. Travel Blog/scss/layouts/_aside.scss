@@ -1,8 +1,9 @@
-@use "../common/variables";
+@use "../common/variables" as *;
 @use "../common/mixin" as m;
 
 .sidebar {
-    width: 33%;
+    // width: 33%;
+    flex: 1;
 
     &__item {
         margin-bottom: 60px;
@@ -27,7 +28,8 @@
         margin-bottom: 30px;
     }
 
-    &__self-introduction-text {
+    &__self-introduction-text,
+    &__ranking-heading {
         font-size: 0.875rem;
         letter-spacing: 1px;
     }
@@ -37,24 +39,22 @@
         margin-bottom: 30px;
     }
 
-    &__ranking-image {
-        margin-bottom: 5px;
-    }
-
     &__ranking-heading {
         font-weight: 400;
-        font-size: 0.875rem;
-        letter-spacing: 1px;
+    }
+
+    &__ranking-image {
+        margin-bottom: 5px;
     }
 
     // archive
     &__archive-list {
         li {
             padding: 20px;
-            border-top: 1px solid #333;
+            border-top: 1px solid $color-primary;
 
             &:last-child {
-                border-bottom: 1px solid #333;
+                border-bottom: 1px solid $color-primary;
             }
         }
     }

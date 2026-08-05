@@ -9,8 +9,8 @@
         margin-bottom: 60px;
     }
 
-    // self-introduction
-    &__self-introduction-image {
+    // profile
+    &__profile-image {
         width: 130px;
         height: 130px;
         margin-inline: auto;
@@ -21,14 +21,14 @@
         }
     }
 
-    &__self-introduction-name,
+    &__profile-name,
     &__heading {
         font-size: 1.125rem;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    &__self-introduction-text,
+    &__profile-text,
     &__ranking-heading {
         font-size: 0.875rem;
         letter-spacing: 1px;

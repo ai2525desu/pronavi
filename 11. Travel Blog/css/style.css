@@ -60,6 +60,12 @@ ul {
   display: flex;
   gap: 50px;
 }
+@media (max-width: 500px) {
+  .content {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 
 .header {
   position: fixed;
@@ -108,15 +114,17 @@ ul {
   font-size: 1rem;
   margin-block: 16px;
 }
+@media (max-width: 500px) {
+  .pickup-article {
+    flex-direction: column;
+  }
+}
 
 .main-article {
   flex: 2.6;
 }
 .main-article__item {
   margin-bottom: 80px;
-}
-.main-article__item:last-of-type {
-  margin-bottom: 200px;
 }
 .main-article__title {
   font-size: 1.5rem;
@@ -184,6 +192,11 @@ ul {
 .footer__inner {
   display: flex;
   gap: 40px;
+}
+@media (max-width: 500px) {
+  .footer__inner {
+    flex-direction: column;
+  }
 }
 .footer__section {
   flex: 1;

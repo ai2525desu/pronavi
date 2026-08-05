@@ -7,6 +7,9 @@
     &__inner {
         display: flex;
         gap: 40px;
+        @include m.sp {
+            flex-direction: column;
+        }
     }
 
     &__section {

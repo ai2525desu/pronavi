@@ -187,11 +187,11 @@ ul {
 
 .footer {
   background-color: #f7f7f7;
-  padding-top: 50px;
 }
 .footer__inner {
   display: flex;
   gap: 40px;
+  padding-top: 50px;
 }
 @media (max-width: 500px) {
   .footer__inner {
@@ -212,6 +212,7 @@ ul {
 }
 .footer__about-list li {
   position: relative;
+  padding-bottom: 5px;
   padding-left: 12px;
 }
 .footer__about-list li::before {
@@ -226,6 +227,7 @@ ul {
   border-style: solid;
   border-width: 6px 0px 6px 8px;
   border-color: transparent transparent transparent #333;
+  margin-top: -2px;
 }
 .footer__menu-nav li {
   padding: 15px;

@@ -1,21 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>創作</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<head>
+    <body>
+        <!-- header背景に画像 -->
+        <header class="header">
+            <h1 class="site-logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="創作" />
+                </a>
+            </h1>
+            <nav class="site__nav">
+                <ul>
+                    <li><a href="#news">お知らせ</a></li>
+                    <li><a href="#products">商品のご紹介</a></li>
+                    <li><a href="#store">店舗のご案内</a></li>
+                </ul>
+            </nav>
+            <a class="site-link" href="#">オンラインストアを見る</a>
+        </header>
 
-    <meta charset="utf-8">
-    <title>創作</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
+        <main>
+            <section class="news" id="news">
+                <h2 class="section-title">
+                    <span class="section-title__subtitle">News</span>
+                    <span class="section-title__maintitle">お知らせ</span>
+                </h2>
+                <ul class="news__list">
+                    <li class="news__item">
+                        <time datetime="2021-01-01">2021.01.01</time>
+                        <p>タイトルタイトルタイトルタイトル</p>
+                    </li>
+                    <li class="news__item">
+                        <time datetime="2021-01-01">2021.01.01</time>
+                        <p>タイトルタイトルタイトルタイトル</p>
+                    </li>
+                    <li class="news__item">
+                        <time datetime="2021-01-01">2021.01.01</time>
+                        <p>タイトルタイトルタイトルタイトル</p>
+                    </li>
+                    <li class="news__item">
+                        <time datetime="2021-01-01">2021.01.01</time>
+                        <p>タイトルタイトルタイトルタイトル</p>
+                    </li>
+                    <li class="news__item">
+                        <time datetime="2021-01-01">2021.01.01</time>
+                        <p>タイトルタイトルタイトルタイトル</p>
+                    </li>
+                </ul>
+            </section>
 
-<body>
+            <section class="products-item" id="products">
+                <h2 class="section-title">
+                    <span class="section-title__maintitle">
+                        新しい価値の創造
+                    </span>
+                    <span class="section-title__subtitle">
+                        Create New Values
+                    </span>
+                </h2>
+                <div class="products-item__content">
+                    <div class="products-item__image">
+                        <img src="img/products1.jpg" alt="" />
+                    </div>
+                    <p>
+                        テキストテキスト<br />
+                        テキストテキスト
+                    </p>
+                </div>
+            </section>
 
-    
-</body>
+            <section class="products-item products__item--reverse">
+                <h2 class="section-title">
+                    <span class="section-title__maintitle">
+                        科学と技術の調和
+                    </span>
+                    <span class="section-title__subtitle">
+                        Science &amp; Technology
+                    </span>
+                </h2>
+                <div class="products-item__content">
+                    <div class="products-item__image">
+                        <img src="img/products2.jpg" alt="" />
+                    </div>
+                    <p>
+                        テキストテキスト<br />
+                        テキストテキスト
+                    </p>
+                </div>
+            </section>
 
+            <div class="store" id="store">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6831585591462!2d139.7350611!3d35.66017715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9c2ef8e6c3%3A0xff8de5eeddcd1e17!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1786196903609!5m2!1sja!2sjp"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer__information">
+                    <h1 class="site-logo">
+                        <a href="index.html">
+                            <img src="img/logo.svg" alt="創作" />
+                        </a>
+                    </h1>
+                    <address class="footer__address">
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://maps.app.goo.gl/QoK2ef5CCVyJwYFw7"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    &#12306;106-0032 東京都港区六本木５丁目×××××
+                                </a>
+                            </li>
+                            <li>
+                                電話:
+                                <a href="tel:03-xxxx-xxxx"> 03-XXXX-XXXX </a>
+                            </li>
+                        </ul>
+                    </address>
+                    <nav class="site__nav">
+                        <ul>
+                            <li><a href="#news">お知らせ</a></li>
+                            <li><a href="#products">商品のご紹介</a></li>
+                            <li><a href="#store">店舗のご案内</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__links">
+                    <a class="site-link" href="#">オンラインストアを見る</a>
+                    <a class="footer__inquiry" href="mailto:xxxx@xxx.xx"
+                        >お問い合わせ</a
+                    >
+                </div>
+                <small> &copy; SOUSAKU </small>
+            </div>
+        </footer>
+    </body>
 </html>

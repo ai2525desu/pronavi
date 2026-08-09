@@ -17,7 +17,7 @@
     </head>
 
     <body>
-        <!-- header背景に画像 -->
+        <!-- header背景に画像,containerで囲うのか迷い中 -->
         <header class="header">
             <h1 class="site-logo">
                 <a href="index.html">
@@ -35,7 +35,7 @@
         </header>
 
         <main>
-            <section class="news" id="news">
+            <section class="news container" id="news">
                 <h2 class="section-title">
                     <span class="section-title__subtitle">News</span>
                     <span class="section-title__maintitle">お知らせ</span>
@@ -64,7 +64,7 @@
                 </ul>
             </section>
 
-            <section class="products-item" id="products">
+            <section class="products-item container" id="products">
                 <h2 class="section-title">
                     <span class="section-title__maintitle">
                         新しい価値の創造
@@ -84,7 +84,7 @@
                 </div>
             </section>
 
-            <section class="products-item products__item--reverse">
+            <section class="products-item products__item--reverse container">
                 <h2 class="section-title">
                     <span class="section-title__maintitle">
                         科学と技術の調和
@@ -120,11 +120,11 @@
         <footer class="footer">
             <div class="footer__inner">
                 <div class="footer__information">
-                    <h1 class="site-logo">
+                    <div class="site-logo">
                         <a href="index.html">
                             <img src="img/logo.svg" alt="創作" />
                         </a>
-                    </h1>
+                    </div>
                     <address class="footer__address">
                         <ul>
                             <li>
@@ -150,12 +150,16 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="footer__links">
-                    <a class="site-link" href="#">オンラインストアを見る</a>
-                    <a class="footer__inquiry" href="mailto:xxxx@xxx.xx"
-                        >お問い合わせ</a
-                    >
-                </div>
+                <ul class="footer__links">
+                    <li>
+                        <a class="site-link" href="#">オンラインストアを見る</a>
+                    </li>
+                    <li>
+                        <a class="footer__inquiry" href="mailto:xxxx@xxx.xx"
+                            >お問い合わせ</a
+                        >
+                    </li>
+                </ul>
                 <small> &copy; SOUSAKU </small>
             </div>
         </footer>

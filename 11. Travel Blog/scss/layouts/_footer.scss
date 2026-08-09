@@ -14,41 +14,46 @@
 
     &__section {
         flex: 1;
-    }
 
-    &__section-title {
-        font-size: 1.125rem;
-        margin-bottom: 20px;
+        &__section {
+            &-title {
+                font-size: 1.125rem;
+                margin-bottom: 20px;
+            }
+        }
     }
 
     // about
-    &__about-text {
-        font-size: 0.875rem;
-        letter-spacing: 0.5px;
-        margin-bottom: 12px;
-    }
+    &__about {
+        &-text {
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
 
-    &__about-list {
-        li {
-            position: relative;
-            padding-bottom: 5px;
-            padding-left: 12px;
+        &-list {
+            li {
+                position: relative;
+                padding-bottom: 5px;
+                padding-left: 12px;
 
-            &::before {
-                width: 10%;
-                content: "";
-                // position使用することで文章の冒頭部分のずれを解消
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 6px 0px 6px 8px;
-                border-color: transparent transparent transparent $color-primary;
-                // このmargin-topのマイナス値で微妙に文字と参画の先端がずれるのを解消
-                margin-top: -2px;
+                &::before {
+                    width: 10%;
+                    content: "";
+                    // position使用することで文章の冒頭部分のずれを解消
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 0px 6px 8px;
+                    border-color: transparent transparent transparent
+                        $color-primary;
+                    // このmargin-topのマイナス値で微妙に文字と参画の先端がずれるのを解消したが、これはtransformがしてしてあるので不要
+                    // margin-top: -2px;
+                }
             }
         }
     }

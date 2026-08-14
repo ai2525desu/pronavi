@@ -1,15 +1,28 @@
-@charset "UTF-8";
+html {
+  font-size: 100%;
+}
 
-/* 
+body {
+  writing-mode: vertical-rl;
+}
 
-writing-mode: vertical-rl;
+img {
+  width: 100%;
+  vertical-align: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
-または
+iframe {
+  width: 100%;
+}
 
-writing-mode: vertical-lr;
+a {
+  text-decoration: none;
+  color: #fff;
+}
 
-
-これを使って縦書きにしましょう！
-
-
-*/
+ul {
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */

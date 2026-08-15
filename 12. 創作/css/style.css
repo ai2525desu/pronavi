@@ -2,19 +2,11 @@ html {
   font-size: 100%;
 }
 
-body {
-  writing-mode: vertical-rl;
-}
-
 img {
   width: 100%;
   vertical-align: bottom;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-iframe {
-  width: 100%;
 }
 
 a {
@@ -24,5 +16,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  padding-inline: 20px;
 }
 /*# sourceMappingURL=style.css.map */

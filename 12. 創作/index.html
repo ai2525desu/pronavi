@@ -14,7 +14,7 @@
             href="https://unpkg.com/ress/dist/ress.min.css"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif+JP&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/style.css" />
@@ -23,19 +23,21 @@
     <body>
         <!-- header背景に画像:pcとspをブレークポンとで切り替え -->
         <header class="header">
-            <h1 class="site-logo">
+            <h1 class="header__logo site-logo">
                 <a href="index.html">
                     <img src="img/logo.svg" alt="創作" />
                 </a>
             </h1>
-            <nav class="site__nav">
+            <nav class="header__nav">
                 <ul>
                     <li><a href="#news">お知らせ</a></li>
                     <li><a href="#products">商品のご紹介</a></li>
                     <li><a href="#store">店舗のご案内</a></li>
                 </ul>
             </nav>
-            <a class="site-link" href="#">オンラインストアを見る</a>
+            <div class="header__link">
+                <a href="#">オンラインストアを見る</a>
+            </div>
         </header>
 
         <main>
@@ -145,7 +147,7 @@
                             </li>
                         </ul>
                     </address>
-                    <nav class="site__nav">
+                    <nav class="footer__nav">
                         <ul>
                             <li><a href="#news">お知らせ</a></li>
                             <li><a href="#products">商品のご紹介</a></li>
@@ -155,12 +157,10 @@
                 </div>
                 <ul class="footer__links">
                     <li>
-                        <a class="site-link" href="#">オンラインストアを見る</a>
+                        <a href="#">オンラインストアを見る</a>
                     </li>
                     <li>
-                        <a class="footer__inquiry" href="mailto:xxxx@xxx.xx"
-                            >お問い合わせ</a
-                        >
+                        <a href="mailto:xxxx@xxx.xx">お問い合わせ</a>
                     </li>
                 </ul>
                 <small> &copy; SOUSAKU </small>

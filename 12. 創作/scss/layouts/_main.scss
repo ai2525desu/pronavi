@@ -1,0 +1,82 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+// news
+.news {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+
+    &__list {
+        writing-mode: vertical-rl;
+        margin-top: 80px;
+    }
+
+    &__item {
+        padding-block: 30px;
+        padding-inline: 15px;
+        border-right: 1px solid $color-black;
+
+        &:last-child {
+            border-left: 1px solid $color-black;
+        }
+
+        time {
+            font-size: 0.75rem;
+            margin-left: 5px;
+        }
+    }
+}
+
+// products-item
+.products-item {
+    display: flex;
+    gap: 20px;
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        width: 65%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__image {
+        img {
+            height: 100%;
+        }
+    }
+
+    &__text {
+        width: 55%;
+        padding-block: 60px;
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        background-color: rgba(180, 72, 62, 0.5);
+        text-align: center;
+        color: $color-white;
+        z-index: 10;
+
+        &--reverse {
+            background-color: rgba(249, 234, 17, 0.5);
+            right: 0;
+            left: -20px;
+        }
+    }
+}
+
+// store
+.store {
+    width: 100%;
+    height: 450px;
+}

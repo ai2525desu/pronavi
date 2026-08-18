@@ -4,6 +4,7 @@ html {
 
 body {
   font-family: "Noto Serif JP", serif;
+  background-color: #e6e2d7;
 }
 
 img {
@@ -11,6 +12,11 @@ img {
   vertical-align: bottom;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
 
 section {
@@ -52,13 +58,17 @@ ul {
 .section-title--inline {
   flex-direction: column;
   align-items: start;
-  gap: 0;
+  gap: 5px;
 }
 .section-title__subtitle {
   font-size: 0.875rem;
 }
 .section-title__maintitle {
   font-size: 2.25rem;
+  letter-spacing: 0.1em;
+}
+.section-title__maintitle--products {
+  font-size: 2rem;
 }
 
 .header {
@@ -94,5 +104,70 @@ ul {
   display: inline-block;
   padding: 30px 18px;
   border: 1px solid #ccc;
+}
+
+.news {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+}
+.news__list {
+  writing-mode: vertical-rl;
+  margin-top: 80px;
+}
+.news__item {
+  padding-block: 30px;
+  padding-inline: 15px;
+  border-right: 1px solid #000;
+}
+.news__item:last-child {
+  border-left: 1px solid #000;
+}
+.news__item time {
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+
+.products-item {
+  display: flex;
+  gap: 20px;
+}
+.products-item--reverse {
+  flex-direction: row-reverse;
+}
+.products-item__content {
+  width: 65%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.products-item__content--reverse {
+  flex-direction: row-reverse;
+}
+.products-item__image img {
+  height: 100%;
+}
+.products-item__text {
+  width: 55%;
+  padding-block: 60px;
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  background-color: rgba(180, 72, 62, 0.5);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+}
+.products-item__text--reverse {
+  background-color: rgba(249, 234, 17, 0.5);
+  right: 0;
+  left: -20px;
+}
+
+.store {
+  width: 100%;
+  height: 450px;
 }
 /*# sourceMappingURL=style.css.map */

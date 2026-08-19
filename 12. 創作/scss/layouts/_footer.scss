@@ -1,0 +1,57 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.footer {
+    background-color: $color-black;
+    padding: 80px 80px 30px 30px;
+
+    @include m.tb {
+        padding: 40px 20px 30px;
+    }
+
+    &__inner {
+        width: 100%;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    &__address {
+        margin-left: 60px;
+        color: $color-white;
+
+        @include m.tb {
+            margin-left: 30px;
+        }
+
+        li {
+            font-style: normal;
+            font-size: 0.875rem;
+        }
+
+        span {
+            text-orientation: sideways;
+        }
+    }
+
+    &__links {
+        li {
+            display: inline-block;
+            font-size: 0.875rem;
+            &:not(:last-child) {
+                padding-bottom: 15px;
+                border-bottom: 1px solid $color-white;
+            }
+        }
+    }
+
+    small {
+        display: block;
+        text-align: center;
+        color: $color-white;
+        font-size: 0.625rem;
+    }
+}

@@ -1,4 +1,5 @@
-@use "variables" as *;
+@use "./variables" as *;
+@use "./mixin" as m;
 
 html {
     font-size: 100%;
@@ -16,12 +17,16 @@ img {
 }
 
 iframe {
+    display: block;
     width: 100%;
     height: 100%;
 }
 
 section {
     margin-bottom: 180px;
+    @include m.tb {
+        margin-bottom: 80px;
+    }
 }
 
 h2 {

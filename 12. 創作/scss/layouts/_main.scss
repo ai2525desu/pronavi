@@ -7,15 +7,37 @@
     flex-direction: row-reverse;
     gap: 100px;
 
+    @include m.tb {
+        gap: 30px;
+    }
+
     &__list {
         writing-mode: vertical-rl;
         margin-top: 80px;
+
+        @include m.tb {
+            margin-top: 20px;
+        }
     }
 
     &__item {
         padding-block: 30px;
         padding-inline: 15px;
         border-right: 1px solid $color-black;
+
+        @include m.tb {
+            padding-block: 15px;
+            padding-inline: 5px;
+
+            &:nth-child(n + 4) {
+                display: none;
+                border-left: 1px solid $color-black;
+            }
+
+            &:nth-child(n + 3) {
+                border-left: 1px solid $color-black;
+            }
+        }
 
         &:last-child {
             border-left: 1px solid $color-black;
@@ -33,6 +55,10 @@
     display: flex;
     gap: 20px;
 
+    @include m.tb {
+        gap: 10px;
+    }
+
     &--reverse {
         flex-direction: row-reverse;
     }
@@ -44,6 +70,11 @@
         justify-content: center;
         align-items: flex-end;
         position: relative;
+
+        @include m.tb {
+            width: 89%;
+            margin-top: 50px;
+        }
 
         &--reverse {
             flex-direction: row-reverse;
@@ -66,6 +97,11 @@
         text-align: center;
         color: $color-white;
         z-index: 10;
+
+        @include m.tb {
+            width: 65%;
+            padding-block: 30px;
+        }
 
         &--reverse {
             background-color: rgba(249, 234, 17, 0.5);

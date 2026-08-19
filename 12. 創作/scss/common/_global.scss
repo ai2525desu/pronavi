@@ -2,6 +2,7 @@
 @use "mixin" as m;
 
 .container {
+    width: 100%;
     max-width: $container-width;
     padding-inline: 20px;
     margin-inline: auto;
@@ -12,6 +13,28 @@
         width: 40px;
         height: 100%;
         line-height: 1;
+        margin-left: 60px;
+
+        @include m.tb {
+            .footer__information & {
+                margin-left: 25px;
+            }
+        }
+    }
+    &-nav {
+        li {
+            margin-left: 25px;
+
+            .footer__information & {
+                font-size: 0.875rem;
+            }
+
+            @include m.tb {
+                .footer__information & {
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -30,14 +53,26 @@
 
     &__subtitle {
         font-size: 0.875rem;
+        @include m.tb {
+            .products-item & {
+                display: none;
+            }
+        }
     }
 
     &__maintitle {
         font-size: 2.25rem;
         letter-spacing: 0.1em;
 
-        &--products {
+        @include m.tb {
+            font-size: 1.75rem;
+        }
+
+        .products-item & {
             font-size: 2rem;
+            @include m.tb {
+                font-size: 1.5rem;
+            }
         }
     }
 }

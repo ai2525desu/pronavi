@@ -15,8 +15,8 @@
         line-height: 1;
         margin-left: 60px;
 
-        @include m.tb {
-            .footer__information & {
+        .footer__information & {
+            @include m.tb {
                 margin-left: 25px;
             }
         }
@@ -27,13 +27,12 @@
 
             .footer__information & {
                 font-size: 0.875rem;
-            }
-
-            @include m.tb {
-                .footer__information & {
+                
+                @include m.tb {
                     margin-left: 10px;
                 }
             }
+
         }
     }
 }

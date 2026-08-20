@@ -12,7 +12,7 @@
     &__inner {
         width: 100%;
         writing-mode: vertical-rl;
-        text-orientation: upright;
+        // text-orientation: upright;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -32,9 +32,9 @@
             font-size: 0.875rem;
         }
 
-        span {
-            text-orientation: sideways;
-        }
+        // span {
+        //     text-orientation: sideways;
+        // }
     }
 
     &__links {

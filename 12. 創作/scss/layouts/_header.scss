@@ -24,12 +24,20 @@
         left: 40px;
         display: inline-block;
         padding: 8px;
+        // 自身の回答
         background-color: #333;
+        // 解答例では、
+        // background: rgba(255, 255, 255, 0.2);
 
         a {
             display: inline-block;
             padding: 30px 18px;
             border: 1px solid #ccc;
+        }
+
+        // 自身つけ忘れ
+        a:hover {
+            opacity: 0.7;
         }
     }
 }

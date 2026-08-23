@@ -11,6 +11,7 @@
 
     &__inner {
         width: 100%;
+        // 解答例では、ここに縦書きを付けずに各個別の物に縦書きを指定。そうすることで横並びの大まかなレイアウトは変えずに済んでいる
         writing-mode: vertical-rl;
         // text-orientation: upright;
         display: flex;

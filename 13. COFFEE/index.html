@@ -1,22 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>COFFEE</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>COFFEE</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">    
-</head>
+    <body>
+        <header class="header">
+            <nav class="header__nav">
+                <ul>
+                    <li>
+                        <a href="#menu">MENU</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#location">LOCATION</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="COFFEE" />
+                </a>
+            </h1>
+        </header>
 
-<body>
-    
-    
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <main>
+            <section class="menu" id="menu">
+                <h2 class="section-title">MENU</h2>
+                <div class="menu__content container">
+                    <div class="menu__left-item">
+                        <h3 class="section-item-title">COFFEE</h3>
+                        <dl class="menu__list">
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                        </dl>
+                    </div>
+                    <div class="menu__right-item">
+                        <h3 class="section-item-title">FOOD</h3>
+                        <dl class="menu__list">
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                        </dl>
+                        <h3 class="section-item-title">OTHER</h3>
+                        <dl class="menu__list">
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                            <dt>XXXXXXXX</dt>
+                            <dd>¥500</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
 
+            <section class="about" id="about">
+                <h2 class="section-title">ABOUT</h2>
+                <div class="about__content container">
+                    <h3 class="section-item-title">COFFEE</h3>
+                    <ul class="about__text">
+                        <li>
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                        </li>
+                        <li>
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                        </li>
+                        <li>
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                        </li>
+                        <li>
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキスト
+                        </li>
+                    </ul>
+                    <a href="#" class="about__link">Read More</a>
+                </div>
+            </section>
+
+            <section class="location" id="location">
+                <h2 class="section-title">LOCATION</h2>
+                <div class="location__content container">
+                    <h3 class="section-item-title">OUR STORE</h3>
+                    <div class="location__map">
+                        <!-- iframeに埋め込まれているコンテンツが何なのかを、支援技術（スクリーンリーダー）に伝える -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479746645863!2d139.7454329!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1787485316027!5m2!1sja!2sjp"
+                            title="店舗の所在地を示すGoogleMaps"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+                    </div>
+                    <ul class="location__store-information">
+                        <li>
+                            <address>
+                                <a
+                                    href="https://share.google/rfaBBZBXe8eX6PH5C"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    X-XX-XX, Ebisuminami, Shibuya-ku, Tokyo
+                                    150-0022<br />
+                                    東京都渋谷区恵比寿南X-XX-XX
+                                </a>
+                            </address>
+                        </li>
+                        <li>Open 7 days a Week</li>
+                        <li>9:00am to 10:00pm</li>
+                        <li>
+                            <address>
+                                <a href="tel:xxxxxxxxxx"> 電話:XX-XXXX-XXXX </a>
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <small> &copy; COFFEE </small>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

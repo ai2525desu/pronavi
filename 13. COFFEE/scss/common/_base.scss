@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use "./variables" as *;
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: $color-background;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+iframe {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,18 @@
+@use "./variables" as *;
+@use "./mixin" as m;
+
+.container {
+    max-width: $container-width;
+    padding-inline: clamp(8px, 2vw, 16px);
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: $color-white;
+    padding-block: clamp(32px, 7.5vw, 112px);
+}
+
+.section-item-title {
+    font-size: clamp(1.25rem, 2.7vw, 2.5rem);
+    color: $color-black;
+}

@@ -1,0 +1,45 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1000px;
+  padding-inline: clamp(8px, 2vw, 16px);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  color: #fff;
+  padding-block: clamp(32px, 7.5vw, 112px);
+}
+
+.section-item-title {
+  font-size: clamp(1.25rem, 2.7vw, 2.5rem);
+  color: #000;
+}
+/*# sourceMappingURL=main.css.map */

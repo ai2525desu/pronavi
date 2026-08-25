@@ -21,8 +21,8 @@
             color: $color-white;
             font-weight: bold;
             // text-shadowとfilterどちらが良いのか？その判断基準は？
-            // text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            // filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
             transition: 0.3s ease;
 
             &:hover {
@@ -37,6 +37,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        filter: drop-shadow(2px 2px 8px rgba(255, 255, 255, 0.45));
+
+        img {
+            filter: drop-shadow(2px 2px 8px rgba(255, 255, 255, 0.45));
+        }
     }
 }

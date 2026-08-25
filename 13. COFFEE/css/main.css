@@ -4,6 +4,7 @@ html {
 
 body {
   background-color: #fff;
+  font-family: Arial, sans-serif;
 }
 
 img {
@@ -36,7 +37,12 @@ ul {
 .section-title {
   font-size: clamp(2rem, 5vw, 4.5rem);
   color: #fff;
-  padding-block: clamp(32px, 7.5vw, 112px);
+  padding-block: clamp(32px, 8vw, 112px);
+  text-align: center;
+  line-height: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .section-item-title {
   font-size: clamp(1.25rem, 2.7vw, 2.5rem);
@@ -51,6 +57,7 @@ ul {
   padding-block: 20px;
   padding-inline: clamp(15px, 4.5vw, 60px);
   position: relative;
+  margin-bottom: 20px;
 }
 .header__nav ul {
   display: flex;
@@ -75,5 +82,17 @@ ul {
 }
 .header__logo img {
   filter: drop-shadow(2px 2px 8px rgba(255, 255, 255, 0.45));
+}
+
+.menu .section-title {
+  background-image: url(../../img/menu.jpg);
+}
+
+.about .section-title {
+  background-image: url(../../img/about.jpg);
+}
+
+.location .section-title {
+  background-image: url(../../img/location.jpg);
 }
 /*# sourceMappingURL=main.css.map */

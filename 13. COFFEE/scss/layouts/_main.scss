@@ -1,0 +1,23 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+// menu
+.menu {
+    .section-title {
+        background-image: url(../../img/menu.jpg);
+    }
+}
+
+// about
+.about {
+    .section-title {
+        background-image: url(../../img/about.jpg);
+    }
+}
+
+// location
+.location {
+    .section-title {
+        background-image: url(../../img/location.jpg);
+    }
+}

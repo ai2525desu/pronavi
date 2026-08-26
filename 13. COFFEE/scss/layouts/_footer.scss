@@ -1,0 +1,12 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.footer {
+    text-align: center;
+    padding-block: 8px;
+    small {
+        font-size: 0.75rem;
+        // bodyで指定したfontの中で100のfont-weightが適応されず、冒頭にNoto Sans JPを追加することでこのエラーは解消された
+        font-weight: 100;
+    }
+}

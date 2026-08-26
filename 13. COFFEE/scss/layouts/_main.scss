@@ -80,24 +80,28 @@
         display: block;
         width: 160px;
         height: 50px;
+        // 1行のテキストの行ボックスの高さをheightと同じ50pxにすることで、文字を縦方向中央付近に配置している
         line-height: 50px;
         margin-inline: auto;
         text-align: center;
         color: $color-black;
         position: relative;
-        transition: all 0.3s ease;
+        // transitionは「hover側」に指定するものではなく、変化するプロパティを持つ要素側に指定する。そうすることで変化させる側になる__link等他の箇所のtransitionは不要でアニメーションが動く
+        // transition: all 0.3s ease;
 
         // 右下角の二線
         &::before,
         &::after {
             position: absolute;
             content: "";
+            // 二つの0で基準値を右下角に設定
             right: 0;
             bottom: 0;
             background: #e03131;
-            transition: all 0.3s ease;
+            // transition: all 0.3s ease;
         }
 
+        // spanをボタンいっぱいに広げ、span::before / span::afterの位置の基準にする
         span {
             position: relative;
             display: block;
@@ -109,34 +113,44 @@
             &::after {
                 position: absolute;
                 content: "";
+                // ボタンいっぱいに広げたspanタグを利用して、左上角を基準に
                 left: 0;
                 top: 0;
                 background: #e03131;
-                transition: all 0.3s ease;
+                // transition: all 0.3s ease;
             }
         }
 
         // 縦線
         &::before,
         span::before {
+            // widthを2pxにし、heightを長くすることで縦線になる
             width: 2px;
             height: 50%;
+            // 下記のように実際に動くheightの部分にtransitionを絞ることで、後々他のアニメーションが増えても誤作動しなくなる
+            transition: height 0.3s ease;
         }
 
         // 横線
         &::after,
         span::after {
+            // widthを長く、heightを2pxにすることで横線になる
             width: 20%;
             height: 2px;
+            // 下記のように実際に動くwidthの部分にtransitionを絞ることで、後々他のニメーションが増えても誤作動しなくなる
+            transition: width 0.3s ease;
         }
 
         // hover時
         // 親のaタグのhoverをトリガーとして、spanタグのhoverは記述しなくてもアニメーションを動かすことができる
+        // 理由:spanタグはaタグ内部の子要素なので、実質spanタグにマウスが当たっている状態＝親のaタグにカーソルが載っている状態のため親のaタグもhoverになっているから
         &:hover {
+            // 縦線のheight:50%を100%にhover時に伸ばす
             &::before,
             span::before {
                 height: 100%;
             }
+            // 横のwidth:20％を100%にhover時に伸ばす
             &::after,
             span::after {
                 width: 100%;
@@ -158,5 +172,24 @@
 .location {
     .section-title {
         background-image: url(../../img/location.jpg);
+    }
+
+    &__map {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 450px;
+    }
+
+    &__store-information {
+        li {
+            &:nth-child(1),
+            &:nth-child(3) {
+                margin-bottom: 8px;
+            }
+        }
+        a {
+            font-style: normal;
+            color: $color-black;
+        }
     }
 }

@@ -3,6 +3,8 @@
 
 .container {
     max-width: $container-width;
+    padding-top: clamp(30px, 6.5vw, 90px);
+    padding-bottom: clamp(60px, 8.5vw, 120px);
     padding-inline: clamp(8px, 2vw, 16px);
     margin-inline: auto;
 }
@@ -21,7 +23,12 @@
     }
 
     &-item-title {
+        width: fit-content;
+        line-height: 1.5;
         font-size: clamp(1.25rem, 2.7vw, 2.5rem);
         color: $color-black;
+        margin-inline: auto;
+        margin-bottom: clamp(25px, 4.5vw, 64px);
+        border-bottom: 5px solid red;
     }
 }

@@ -6,12 +6,151 @@
     .section-title {
         background-image: url(../../img/menu.jpg);
     }
+
+    &__content {
+        display: flex;
+
+        @include m.sp {
+            flex-direction: column;
+        }
+    }
+
+    &__flex-layout {
+        flex: 1;
+        padding-inline: 40px;
+    }
+
+    &__left-item {
+        border-right: 1px solid $color-black;
+
+        @include m.sp {
+            border: none;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 10%;
+        line-height: 1.5;
+        gap: 24px;
+        font-size: $base-font-size;
+
+        @include m.sp {
+            margin-bottom: 10px;
+        }
+
+        &--food {
+            margin-bottom: 110px;
+
+            @include m.sp {
+                margin-bottom: 0;
+            }
+        }
+
+        dt {
+            border-bottom: 1px dotted $color-black;
+        }
+
+        dd {
+            padding-top: 5px;
+        }
+    }
 }
 
 // about
 .about {
     .section-title {
         background-image: url(../../img/about.jpg);
+    }
+
+    &__text-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+        li {
+            font-size: $base-font-size;
+            line-height: 2;
+        }
+    }
+
+    // Read Moreボタン風aタグのアニメーション
+    &__link {
+        display: block;
+        width: 160px;
+        height: 50px;
+        line-height: 50px;
+        margin-inline: auto;
+        text-align: center;
+        color: $color-black;
+        position: relative;
+        transition: all 0.3s ease;
+
+        // 右下角の二線
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: #e03131;
+            transition: all 0.3s ease;
+        }
+
+        span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            // 左上角の二線
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                background: #e03131;
+                transition: all 0.3s ease;
+            }
+        }
+
+        // 縦線
+        &::before,
+        span::before {
+            width: 2px;
+            height: 50%;
+        }
+
+        // 横線
+        &::after,
+        span::after {
+            width: 20%;
+            height: 2px;
+        }
+
+        // hover時
+        // 親のaタグのhoverをトリガーとして、spanタグのhoverは記述しなくてもアニメーションを動かすことができる
+        &:hover {
+            &::before,
+            span::before {
+                height: 100%;
+            }
+            &::after,
+            span::after {
+                width: 100%;
+            }
+        }
+        // &:hover::before,
+        // span:hover::before {
+        //     height: 100%;
+        // }
+
+        // &:hover::after,
+        // span:hover::after {
+        //     width: 100%;
+        // }
     }
 }
 

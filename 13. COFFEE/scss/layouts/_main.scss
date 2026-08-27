@@ -136,7 +136,9 @@
             width: 2px;
             height: 50%;
             // 下記のように実際に動くheightの部分にtransitionを絞ることで、後々他のアニメーションが増えても誤作動しなくなる
-            transition: height 0.3s ease;
+            // transition: height 0.3s ease;
+            // 基本的にはallでOK。アニメーションの内部で内容が異なる秒数のアニメーションを付けたい場合には個別指定
+            transition: all 0.3s ease;
         }
 
         // 横線
@@ -146,7 +148,9 @@
             width: 20%;
             height: 2px;
             // 下記のように実際に動くwidthの部分にtransitionを絞ることで、後々他のニメーションが増えても誤作動しなくなる
-            transition: width 0.3s ease;
+            // transition: width 0.3s ease;
+            // 基本的にはallでOK。アニメーションの内部で内容が異なる秒数のアニメーションを付けたい場合には個別指定
+            transition: all 0.3s ease;
         }
 
         // hover時

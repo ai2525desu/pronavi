@@ -10,6 +10,7 @@
 }
 
 .section {
+    // 解答例ではすべてのsectionに対してtop20pxの余白が共通のためここに追加
     &-title {
         font-size: clamp(2rem, 5vw, 4.5rem);
         color: $color-white;
@@ -17,13 +18,22 @@
         text-align: center;
         line-height: 1;
         // 背景画像で共通指定になる部分をglobalにまとめる設計
+        // 解答例ではdivでfixed-bgというクよそ＋クラス名でそれをglobalとしてあらかじめ指定
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
+        // section-titleにもh1同様のぽやっと光る影がついていた
+        // filter: drop-shadow(1px 1px 10px #c0c0c0);
+        text-shadow: 1px 1px 10px #c0c0c0;
+
+        @include m.sp {
+            background-attachment: scroll;
+        }
     }
 
     &-item-title {
         width: fit-content;
+        // 解答例では下線をテキスト幅に合わせるためにdisplay:inline-block;
         line-height: 1.5;
         font-size: clamp(1.25rem, 2.7vw, 2.5rem);
         color: $color-black;

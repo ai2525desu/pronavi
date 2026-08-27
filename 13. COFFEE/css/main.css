@@ -7,8 +7,12 @@ body {
   font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
+section {
+  margin-top: 20px;
+}
+
 img {
-  width: 100%;
+  max-width: 100%;
   vertical-align: bottom;
   -o-object-fit: cover;
      object-fit: cover;
@@ -46,6 +50,12 @@ ul {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  text-shadow: 1px 1px 10px #c0c0c0;
+}
+@media (max-width: 500px) {
+  .section-title {
+    background-attachment: scroll;
+  }
 }
 .section-item-title {
   width: -webkit-fit-content;
@@ -61,13 +71,13 @@ ul {
 
 .header {
   background-image: url(../../img/mainvisual.jpg);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   padding-block: 20px;
   padding-inline: clamp(15px, 4.5vw, 57px);
   position: relative;
-  margin-bottom: 20px;
 }
 .header__nav ul {
   display: flex;
@@ -78,13 +88,13 @@ ul {
   color: #fff;
   font-weight: bold;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header__nav a:hover {
-  opacity: 0.8;
   color: red;
 }
 .header__logo {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -150,9 +160,13 @@ ul {
 .about__text-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 15px;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .about__text-list {
+    grid-template-columns: 1fr;
+  }
 }
 .about__text-list li {
   font-size: 0.9rem;

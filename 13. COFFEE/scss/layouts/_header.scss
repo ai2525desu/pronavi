@@ -3,13 +3,17 @@
 
 .header {
     background-image: url(../../img/mainvisual.jpg);
-    background-position: center;
+    // 解答例では＋top指定
+    background-position: center top;
     background-size: cover;
+    // 画像の繰り返し表示を防ぐための
+    background-repeat: no-repeat;
     height: 100vh;
     padding-block: 20px;
+    // 解答例では、4%指定
     padding-inline: clamp(15px, 4.5vw, 57px);
     position: relative;
-    margin-bottom: 20px;
+    // sectionにtopで余白を追加したことにより、margin-bottom: 20px;削除
 
     &__nav {
         ul {
@@ -24,23 +28,36 @@
             // text-shadowとfilterどちらが良いのか？その判断基準は？
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
             // filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
-            transition: 0.3s ease;
+            // allが抜けていた
+            transition: all 0.3s ease;
 
             &:hover {
-                opacity: 0.8;
+                // opacityの指定なしだった
+                // opacity: 0.8;
                 color: red;
             }
         }
     }
 
+    // 何かが作用してロゴがスマホサイズだとロゴが小さくなってしまっている
+    // positionを使用したことでBlock要素のように幅いっぱいに広がるという挙動ではなく、中身に応じた幅に変化したためwidthやpadding-inlineがないとスマホサイズの時にロゴが小さくなってしまった
     &__logo {
+        width: 100%;
+        padding-inline: 16px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        // 解答例では下記の指定でh1自体の大きさをcontainerと同じだけ枠いっぱいにしている
+        // top: 50%;
+        // transform: translateY(-50%);
+        // left: 0;
+        // right: 0;
 
         img {
             filter: drop-shadow(2px 2px 8px rgba(255, 255, 255, 0.45));
+            // 解答例では下記。自身の指定よりもぽやっと光る
+            //  filter: drop-shadow(1px 1px 10px #c0c0c0);
         }
     }
 }

@@ -8,11 +8,19 @@ html {
 body {
     background-color: $color-background;
     font-family: $base-font-family;
+    // 解答例では,line-height:1.7;とfont-size:$base-font-size;を読み込んで最初から全体に適用している
+}
+
+section {
+    margin-top: 20px;
 }
 
 img {
-    width: 100%;
+    // width: 100%;
+    // 解答例 
+    max-width: 100%;
     vertical-align: bottom;
+    // 解答例では下記は読み込んでいない
     object-fit: cover;
 }
 

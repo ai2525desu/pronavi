@@ -1,22 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Products2 | Furniture Design</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキストテキストテキス"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Products2 | Furniture Design</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <body>
+        <header id="header" class="header container"></header>
 
-<body>
-    
-    
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <main class="products container">
+            <h2 class="section-title">Products</h2>
+            <ul class="item-card-list">
+                <li class="item-card">
+                    <a href="item13.html">
+                        <div class="item-image">
+                            <img src="img/item13.jpg" alt="商品名" />
+                        </div>
+                        <p class="item-title">
+                            プロダクトタイトルプロダクトタイトル
+                        </p>
+                        <p class="item-price">¥99,999 +tax</p>
+                    </a>
+                </li>
+                <li class="item-card">
+                    <a href="item14.html">
+                        <div class="item-image">
+                            <img src="img/item14.jpg" alt="商品名" />
+                        </div>
+                        <p class="item-title">
+                            プロダクトタイトルプロダクトタイトル
+                        </p>
+                        <p class="item-price">¥99,999 +tax</p>
+                    </a>
+                </li>
+                <li class="item-card">
+                    <a href="item15.html">
+                        <div class="item-image">
+                            <img src="img/item15.jpg" alt="商品名" />
+                        </div>
+                        <p class="item-title">
+                            プロダクトタイトルプロダクトタイトル
+                        </p>
+                        <p class="item-price">¥99,999 +tax</p>
+                    </a>
+                </li>
+                <li class="item-card">
+                    <a href="item16.html">
+                        <div class="item-image">
+                            <img src="img/item16.jpg" alt="商品名" />
+                        </div>
+                        <p class="item-title">
+                            プロダクトタイトルプロダクトタイトル
+                        </p>
+                        <p class="item-price">¥99,999 +tax</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="products__pagenation">
+                <a class="products__page" href="products.html">1</a>
+                <!-- aria-current="page"は現在の選択中のページであることを支援技術に伝えるもの -->
+                <span class="products__page" aria-current="page">2</span>
+            </div>
+        </main>
 
+        <footer id="footer" class="footer container"></footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

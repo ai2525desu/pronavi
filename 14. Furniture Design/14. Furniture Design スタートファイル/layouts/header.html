@@ -5,12 +5,22 @@
     </a>
 </h1>
 <!-- ハンバーガーメニューの二重線表記 -->
-<div class="header__toggle-btn">
+<!-- aria-labelはスクリーンリーダーにこのbuttonは何かの情報を渡すもの
+     aria-expandedは要素（主にボタンやリンク）が「対応する領域が展開されているか（開いているか）」を表す。
+    aria-controlsとは、ボタンなどの要素が どの要素を制御しているのか を明示。id 属性で対象要素を指定します。
+    buttonタグを使用することでキーボードの操作やスクリーンリーダーにも対応できるし、aria-expendedなどの設定でアクセシビリティの工場にもつながる
+-->
+<button
+    class="header__toggle-btn"
+    aria-label="メニューを開く"
+    aria-expanded="false"
+    aria-controls="header__nav"
+>
     <span></span>
     <span></span>
-</div>
+</button>
 <!-- ハンバーガーメニューの内容 -->
-<nav class="header__nav">
+<nav id="header__nav" class="header__nav">
     <ul>
         <li><a href="products.html">PRODUCTS</a></li>
         <li><a href="about.html">ABOUT</a></li>

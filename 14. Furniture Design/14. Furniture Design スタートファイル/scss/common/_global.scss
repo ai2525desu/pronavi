@@ -1,0 +1,8 @@
+@use "./variables" as *;
+@use "./mixin" as m;
+
+.container {
+    max-width: $max-width-container;
+    padding-inline: 16px;
+    margin-inline: auto;
+}

@@ -1,0 +1,105 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    line-height: 0.5;
+    position: sticky;
+    top: 0;
+    background: $color-white;
+
+    &__logo {
+        width: 180px;
+        height: 20px;
+    }
+
+    &__toggle-btn {
+        width: 30px;
+        height: 30px;
+        position: relative; /*基準*/
+        cursor: pointer;
+        transition: all 0.5s;
+
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $color-black;
+            /*   0.5秒かけて変化させる */
+            transition: all 0.5s;
+
+            &:nth-child(1) {
+                top: 33%;
+            }
+
+            &:nth-child(2) {
+                top: 66%;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &.open {
+        .header__toggle-btn {
+            span {
+                background-color: $color-white;
+                z-index: 10;
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .header__nav {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0, 0.8);
+            padding: 40px;
+
+            ul {
+                li {
+                    // animationはショートハンド
+                    animation: slideInLeft 0.4s ease-out forwards;
+
+                    @keyframes slideInLeft {
+                        from {
+                            opacity: 0;
+                            transform: translateX(-40px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                    }
+                    margin-bottom: 25px;
+                }
+                a {
+                    color: $color-white;
+                    transition: all 0.4s;
+                    font-size: $base-font-size;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}

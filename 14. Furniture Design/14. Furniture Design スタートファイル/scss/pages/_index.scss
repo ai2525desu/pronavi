@@ -1,0 +1,14 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.index {
+    &__products-link {
+        display: block;
+        text-align: center;
+        font-size: $base-font-size;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

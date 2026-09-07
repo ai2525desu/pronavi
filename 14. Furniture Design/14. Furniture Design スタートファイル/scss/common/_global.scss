@@ -6,3 +6,26 @@
     padding-inline: 16px;
     margin-inline: auto;
 }
+
+.item {
+    &-card-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding-top: 20px;
+        margin-bottom: 30px;
+
+        @include m.tb {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &-image {
+        margin-bottom: 8px;
+    }
+
+    &-title,
+    &-price {
+        font-size: 0.75rem;
+    }
+}

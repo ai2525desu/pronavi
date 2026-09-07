@@ -16,6 +16,11 @@ main {
   flex: 1;
   margin-bottom: 52px;
 }
+@media (max-width: 768px) {
+  main {
+    margin-bottom: 20px;
+  }
+}
 
 img {
   width: 100%;
@@ -277,5 +282,49 @@ ul {
   width: 600px;
   line-height: 1.5;
   margin-bottom: 32px;
+}
+
+.company__profile {
+  width: 600px;
+  display: grid;
+  grid-template-columns: 180px 420px;
+}
+@media (max-width: 768px) {
+  .company__profile {
+    grid-template-columns: 1fr;
+  }
+}
+.company__profile dt {
+  padding: 20px 10px;
+}
+@media (max-width: 768px) {
+  .company__profile dt {
+    width: 100%;
+    padding: 20px 10px 5px;
+  }
+}
+.company__profile dt:not(:last-child) {
+  border-bottom: 1px solid #dcdbdb;
+}
+@media (max-width: 768px) {
+  .company__profile dt:not(:last-child) {
+    border: none;
+  }
+}
+.company__profile dd {
+  padding: 20px 10px;
+}
+@media (max-width: 768px) {
+  .company__profile dd {
+    width: 100%;
+    padding: 5px 10px 20px;
+  }
+}
+.company__profile dd:not(:last-child) {
+  border-bottom: 1px solid #dcdbdb;
+}
+.company__location {
+  width: 600px;
+  height: 300px;
 }
 /*# sourceMappingURL=main.css.map */

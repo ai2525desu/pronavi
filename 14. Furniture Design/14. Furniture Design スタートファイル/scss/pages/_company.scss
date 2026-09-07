@@ -1,0 +1,48 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.company {
+    &__profile {
+        width: 600px;
+        display: grid;
+        grid-template-columns: 180px 420px;
+
+        @include m.tb {
+            grid-template-columns: 1fr;
+        }
+
+        dt {
+            padding: 20px 10px;
+
+            @include m.tb {
+                width: 100%;
+                padding: 20px 10px 5px;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #dcdbdb;
+
+                @include m.tb {
+                    border: none;
+                }
+            }
+        }
+        dd {
+            padding: 20px 10px;
+
+            @include m.tb {
+                width: 100%;
+                padding: 5px 10px 20px;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #dcdbdb;
+            }
+        }
+    }
+
+    &__location {
+        width: 600px;
+        height: 300px;
+    }
+}

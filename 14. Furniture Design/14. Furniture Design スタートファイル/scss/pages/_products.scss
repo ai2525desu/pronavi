@@ -1,0 +1,14 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.products {
+    &__pagenation {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    &__page {
+        font-size: $base-font-size;
+    }
+}

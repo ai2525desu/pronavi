@@ -49,6 +49,12 @@ ul {
   margin-inline: auto;
 }
 
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
 .item-card-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -201,7 +207,13 @@ ul {
   text-align: center;
   font-size: 0.875rem;
 }
-.index__products-link:hover {
-  opacity: 0.8;
+
+.products__pagenation {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.products__page {
+  font-size: 0.875rem;
 }
 /*# sourceMappingURL=main.css.map */

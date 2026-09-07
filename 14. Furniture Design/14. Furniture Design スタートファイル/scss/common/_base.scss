@@ -6,14 +6,16 @@ html {
 
 body {
     font-family: $base-font-family;
-    font-size: $base-font-family;
+    font-size: $base-font-size;
     color: $color-black;
     min-height: 100vh;
+    // footerの下部配置をflexで指定したことによりheader,main,footerがFlexアイテムになる。
     display: flex;
     flex-direction: column;
 }
 
 main {
+    // footerを下に置くためにbodyをFlexコンテナにしたことで、mainもFlexアイテムになり、これまで普通のブロック要素として横いっぱいに広がっていたmainの幅の決まり方が変わった。
     flex: 1;
     margin-bottom: 52px;
 }

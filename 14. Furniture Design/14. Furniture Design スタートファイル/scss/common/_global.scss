@@ -1,7 +1,14 @@
 @use "./variables" as *;
 @use "./mixin" as m;
 
+// 学習メモ
+// bodyをdisplay:flexにしたことでmainもFlexアイテムとなり、.containerの幅が子要素の幅に影響されるケースを確認。
+// containerにwidth:100%を指定することで、「利用可能な横幅いっぱい＋max-width」という意図を明示できる。
+// 今回はFlexboxとcontainerの幅の関係を理解するため、あえてこの状態で進める。
+
 .container {
+    // margin-inline:autoを持つ.containerと、子要素のwidth:600pxが組み合わさって、mainがコンテンツ幅まで縮む事態が発生。それを解消するためにwidth:100%;を追加
+    width: 100%;
     max-width: $max-width-container;
     padding-inline: 16px;
     margin-inline: auto;

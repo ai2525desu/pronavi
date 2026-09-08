@@ -18,10 +18,11 @@ body {
 main {
     // footerを下に置くためにbodyをFlexコンテナにしたことで、mainもFlexアイテムになり、これまで普通のブロック要素として横いっぱいに広がっていたmainの幅の決まり方が変わった。
     flex: 1;
-    margin-bottom: 52px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 
     @include m.tb {
-        margin-bottom: 20px;
+        padding-bottom: 25px;
     }
 }
 

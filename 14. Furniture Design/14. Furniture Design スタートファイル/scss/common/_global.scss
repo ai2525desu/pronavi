@@ -10,6 +10,7 @@
     // margin-inline:autoを持つ.containerと、子要素のwidth:600pxが組み合わさって、mainがコンテンツ幅まで縮む事態が発生。それを解消するためにwidth:100%;を追加
     width: 100%;
     max-width: $max-width-container;
+    // 下記のpaddingはposition:sticky;でheaderを固定したことによるsection-titleなどの位置調整
     padding-inline: 16px;
     margin-inline: auto;
 }
@@ -25,7 +26,6 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
-        padding-top: 20px;
         margin-bottom: 30px;
 
         @include m.tb {

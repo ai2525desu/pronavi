@@ -3,7 +3,9 @@
 
 .about {
     &__text {
+        // 書いて答礼ではmax-width
         width: 600px;
+        // 解答例では1.9
         line-height: 1.5;
         margin-bottom: 32px;
     }

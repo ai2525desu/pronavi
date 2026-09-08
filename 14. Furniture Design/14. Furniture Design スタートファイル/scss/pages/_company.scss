@@ -3,7 +3,9 @@
 
 .company {
     &__profile {
+        // 解答例ではmax-width
         width: 600px;
+        // 解答例：flex+wrap
         display: grid;
         grid-template-columns: 180px 420px;
 
@@ -42,7 +44,8 @@
     }
 
     &__location {
-        width: 600px;
+        // width: 600px;と最初自身で設定していたが、ここは100%にすることで必然的にや要素の幅が変化すれば柔軟に変わるので100%の方が良い
+        width: 100%;
         height: 300px;
     }
 }

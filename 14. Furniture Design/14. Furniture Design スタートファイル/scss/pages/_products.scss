@@ -2,7 +2,7 @@
 @use "../common/mixin" as m;
 
 .products {
-    &__pagenation {
+    &__pagination {
         display: flex;
         justify-content: center;
         gap: 32px;

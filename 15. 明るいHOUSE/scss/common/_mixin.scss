@@ -1,0 +1,7 @@
+$tb: 960px;
+
+@mixin tb {
+    @media (max-width: ($tb)) {
+        @content;
+    }
+}

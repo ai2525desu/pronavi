@@ -39,36 +39,36 @@
                     <li><a href="#">暮らしの日記</a></li>
                     <li><a href="#">会社概要</a></li>
                 </ul>
+                <ul class="header__sns-links">
+                    <li>
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            instagram
+                        </a>
+                    </li>
+                </ul>
             </nav>
-            <ul class="header__sns-links">
-                <li>
-                    <a
-                        href="https://x.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.facebook.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        facebook
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.instagram.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        instagram
-                    </a>
-                </li>
-            </ul>
         </header>
 
         <main>
@@ -76,43 +76,59 @@
                 <h2 class="section-title">建築事例をご紹介</h2>
                 <ul class="architectural-examples__list">
                     <li class="architectural-examples__item">
-                        <img
-                            class="architectural-examples__img"
-                            src="img/project1.jpg"
-                            alt="建築事例1"
-                        />
-                        <p class="architectural-examples__text"></p>
+                        <a href="#">
+                            <img
+                                class="architectural-examples__img"
+                                src="img/project1.jpg"
+                                alt="建築事例1"
+                            />
+                            <p class="architectural-examples__text">
+                                PROJECT_01
+                            </p>
+                        </a>
                     </li>
                     <li class="architectural-examples__item">
-                        <img
-                            class="architectural-examples__img"
-                            src="img/project2.jpg"
-                            alt="建築事例2"
-                        />
-                        <p class="architectural-examples__text"></p>
+                        <a href="#">
+                            <img
+                                class="architectural-examples__img"
+                                src="img/project2.jpg"
+                                alt="建築事例2"
+                            />
+                            <p class="architectural-examples__text">
+                                PROJECT_02
+                            </p></a
+                        >
                     </li>
                     <li class="architectural-examples__item">
-                        <img
-                            class="architectural-examples__img"
-                            src="img/project3.jpg"
-                            alt="建築事例3"
-                        />
-                        <p class="architectural-examples__text"></p>
+                        <a href="#">
+                            <img
+                                class="architectural-examples__img"
+                                src="img/project3.jpg"
+                                alt="建築事例3"
+                            />
+                            <p class="architectural-examples__text">
+                                PROJECT_03
+                            </p>
+                        </a>
                     </li>
                     <li class="architectural-examples__item">
-                        <img
-                            class="architectural-examples__img"
-                            src="img/project4.jpg"
-                            alt="建築事例4"
-                        />
-                        <p class="architectural-examples__text"></p>
+                        <a href="#">
+                            <img
+                                class="architectural-examples__img"
+                                src="img/project4.jpg"
+                                alt="建築事例4"
+                            />
+                            <p class="architectural-examples__text">
+                                PROJECT_04
+                            </p>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="features container">
                 <h2 class="section-title">明るいHOUSEの特徴</h2>
-                <ul features__content>
+                <ul class="features__content">
                     <!-- ここ、クラス名つけすぎかも？ -->
                     <li class="features__item">
                         <a class="features__link" href="#">design</a>
@@ -134,19 +150,22 @@
             </section>
 
             <section class="process container">
-                <h2 class="section-title">家ができるまでの流れ</h2>
+                <h2 class="section-title section-title--black">
+                    家ができるまでの流れ
+                </h2>
                 <p class="section-introduction">
                     お問い合わせいただいてから、家が完成するまでの流れです。
                 </p>
                 <div class="process__content">
                     <ol class="process__figure-list">
-                        <li process__item>ヒアリング</li>
-                        <li process__item>プラン提案</li>
-                        <li process__item>契約</li>
-                        <li process__item>着工</li>
-                        <li process__item>完成</li>
+                        <li class="process__item">ヒアリング</li>
+                        <li class="process__item">プラン提案</li>
+                        <li class="process__item">契約</li>
+                        <li class="process__item">着工</li>
+                        <li class="process__item">完成</li>
                     </ol>
                     <!-- ここの丸印をspanで作成するのかそれともcounter-numberで作成するのかを悩み -->
+                    <!-- ol＋liで数字自体を出しつつ明確に隙間を設定できるような方法もあり -->
                     <dl class="process__detail">
                         <dt>ヒアリング</dt>
                         <dd>
@@ -178,6 +197,7 @@
             </section>
 
             <section class="inquiry container">
+                <h2 class="section-title section-title--black">お問い合わせ</h2>
                 <p class="section-introduction">
                     お問い合わせは下記からお願いいたします。
                 </p>

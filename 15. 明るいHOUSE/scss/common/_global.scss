@@ -1,0 +1,36 @@
+@use "./mixin" as m;
+@use "./variables" as *;
+
+.container {
+    max-width: $max-width-container;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 30%;
+        border-top: 1px solid $color-white;
+    }
+
+    &__color-black {
+        color: $color-black;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 25%;
+            border-top: 1px solid $color-black;
+        }
+    }
+}

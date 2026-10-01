@@ -1,3 +1,42 @@
+@use "./variables" as *;
+
 html {
     font-size: 100%;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+}
+
+main,
+footer {
+    margin-left: 300px;
+}
+
+section {
+    margin-block: 80px;
 }

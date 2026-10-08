@@ -4,8 +4,22 @@ $(function () {
   /*=================================================
   ハンバーガーメニュー
   ===================================================*/
- 
-
+  $(".header__toggle-btn").on("click", function () { 
+    if ($("header").hasClass("open")) {
+      $("header").removeClass("open");
+      $(this).attr("aria-expanded", "false");
+      $(this).attr("aria-label", "メニューを開く");
+    } else { 
+      $("header").addClass("open");
+      $(this).attr("aria-expanded", "true");
+      $(this).attr("aria-label", "メニューを閉じる");
+    }
+  });
+  $(".header__mask").on("click", function () {
+      $("header").removeClass("open");
+      $(".header__toggle-btn").attr("aria-expanded", "false");
+      $(".header__toggle-btn").attr("aria-label", "メニューを開く");
+  });
     
   /*=================================================
   トップに戻る

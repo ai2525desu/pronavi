@@ -1,0 +1,14 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.main-bg-video {
+    width: calc(100% - $header-width);
+    height: 100vh;
+    video {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: $header-width;
+        z-index: -1;
+    }
+}

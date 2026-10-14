@@ -12,3 +12,97 @@
         z-index: -1;
     }
 }
+
+.architectural-examples {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    &__item {
+        border: 1px solid $color-white;
+        position: relative;
+
+        p {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 5px;
+            color: $color-white;
+            font-size: 0.75rem;
+            width: 100%;
+            // グラデーションの指定はもう一度要確認
+            background: linear-gradient(
+                to top,
+                rgba(51, 51, 51, 1) 60%,
+                rgba(51, 51, 51, 0)
+            );
+        }
+    }
+}
+
+.features {
+    &__list {
+        display: flex;
+        color: $color-white;
+        gap: 30px;
+    }
+
+    &__item {
+        text-align: center;
+        // width:30%のように三等分にして同じ大きさでliのサイズをそろえるための指定
+        flex: 1;
+        a {
+            display: inline-block;
+            color: $color-white;
+            width: 100%;
+            line-height: 15px;
+            padding: calc(50% - 7.5px) 0;
+            margin-bottom: 15px;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            &::after {
+                position: absolute;
+                background: rgba(198, 198, 198, 0.5);
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transform: scale(0, 1);
+                transform-origin: left top;
+                transition: 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+                z-index: -1;
+            }
+
+            &:hover {
+                &::after {
+                    transform: scale(1, 1);
+                }
+            }
+        }
+
+        h3 {
+            margin-bottom: 5px;
+        }
+    }
+}
+.main-bg-light {
+    background-color: $color-white;
+    padding-top: 100px;
+}
+
+.process {
+    &__content {
+        margin-top: 60px;
+        display: flex;
+    }
+}
+
+.inquiry {
+}

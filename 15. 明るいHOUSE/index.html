@@ -94,50 +94,26 @@
                 <ul class="architectural-examples__list">
                     <li class="architectural-examples__item">
                         <a href="#">
-                            <img
-                                class="architectural-examples__img"
-                                src="img/project1.jpg"
-                                alt="建築事例1"
-                            />
-                            <p class="architectural-examples__text">
-                                PROJECT_01
-                            </p>
+                            <img src="img/project1.jpg" alt="建築事例1" />
+                            <p>PROJECT_01</p>
                         </a>
                     </li>
                     <li class="architectural-examples__item">
                         <a href="#">
-                            <img
-                                class="architectural-examples__img"
-                                src="img/project2.jpg"
-                                alt="建築事例2"
-                            />
-                            <p class="architectural-examples__text">
-                                PROJECT_02
-                            </p></a
+                            <img src="img/project2.jpg" alt="建築事例2" />
+                            <p>PROJECT_02</p></a
                         >
                     </li>
                     <li class="architectural-examples__item">
                         <a href="#">
-                            <img
-                                class="architectural-examples__img"
-                                src="img/project3.jpg"
-                                alt="建築事例3"
-                            />
-                            <p class="architectural-examples__text">
-                                PROJECT_03
-                            </p>
+                            <img src="img/project3.jpg" alt="建築事例3" />
+                            <p>PROJECT_03</p>
                         </a>
                     </li>
                     <li class="architectural-examples__item">
                         <a href="#">
-                            <img
-                                class="architectural-examples__img"
-                                src="img/project4.jpg"
-                                alt="建築事例4"
-                            />
-                            <p class="architectural-examples__text">
-                                PROJECT_04
-                            </p>
+                            <img src="img/project4.jpg" alt="建築事例4" />
+                            <p>PROJECT_04</p>
                         </a>
                     </li>
                 </ul>
@@ -145,109 +121,111 @@
 
             <section class="features container">
                 <h2 class="section-title">明るいHOUSEの特徴</h2>
-                <ul class="features__content">
-                    <!-- ここ、クラス名つけすぎかも？ -->
+                <ul class="features__list">
                     <li class="features__item">
-                        <a class="features__link" href="#">design</a>
-                        <!-- 下記は二つともpタグか迷う -->
-                        <h3 class="features__heading">デザイン</h3>
-                        <p class="features__text">テキストテキストテキスト</p>
+                        <a href="#">design</a>
+                        <h3>デザイン</h3>
+                        <p>テキストテキストテキスト</p>
                     </li>
                     <li class="features__item">
-                        <a class="features__link" href="#">quality</a>
-                        <h3 class="features__heading">性能</h3>
-                        <p class="features__text">テキストテキストテキスト</p>
+                        <a href="#">quality</a>
+                        <h3>性能</h3>
+                        <p>テキストテキストテキスト</p>
                     </li>
                     <li class="features__item">
-                        <a class="features__link" href="#">support</a>
-                        <h3 class="features__heading">サポート</h3>
-                        <p class="features__text">テキストテキストテキスト</p>
+                        <a href="#">support</a>
+                        <h3>サポート</h3>
+                        <p>テキストテキストテキスト</p>
                     </li>
                 </ul>
             </section>
 
-            <section class="process container">
-                <h2 class="section-title section-title--black">
-                    家ができるまでの流れ
-                </h2>
-                <p class="section-introduction">
-                    お問い合わせいただいてから、家が完成するまでの流れです。
-                </p>
-                <div class="process__content">
-                    <ol class="process__figure-list">
-                        <li class="process__item">ヒアリング</li>
-                        <li class="process__item">プラン提案</li>
-                        <li class="process__item">契約</li>
-                        <li class="process__item">着工</li>
-                        <li class="process__item">完成</li>
-                    </ol>
-                    <!-- ここの丸印をspanで作成するのかそれともcounter-numberで作成するのかを悩み -->
-                    <!-- ol＋liで数字自体を出しつつ明確に隙間を設定できるような方法もあり -->
-                    <dl class="process__detail">
-                        <dt>ヒアリング</dt>
-                        <dd>
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                        </dd>
-                        <dt>プランニング</dt>
-                        <dd>
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                        </dd>
-                        <dt>契約</dt>
-                        <dd>
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                        </dd>
-                        <dt>着工</dt>
-                        <dd>
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                        </dd>
-                        <dt>完成</dt>
-                        <dd>
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                            テキストテキストテキストテキストテキストテキストテキストテキスト
-                        </dd>
-                    </dl>
-                </div>
-            </section>
+            <div class="main-bg-light">
+                <section class="process container">
+                    <h2 class="section-title section-title--black">
+                        家ができるまでの流れ
+                    </h2>
+                    <p class="section-introduction">
+                        お問い合わせいただいてから、家が完成するまでの流れです。
+                    </p>
+                    <div class="process__content">
+                        <ol class="process__figure-list">
+                            <li class="process__item">ヒアリング</li>
+                            <li class="process__item">プラン提案</li>
+                            <li class="process__item">契約</li>
+                            <li class="process__item">着工</li>
+                            <li class="process__item">完成</li>
+                        </ol>
+                        <!-- ここの丸印をspanで作成するのかそれともcounter-numberで作成するのかを悩み -->
+                        <!-- ol＋liで数字自体を出しつつ明確に隙間を設定できるような方法もあり -->
+                        <dl class="process__detail">
+                            <dt>ヒアリング</dt>
+                            <dd>
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </dd>
+                            <dt>プランニング</dt>
+                            <dd>
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </dd>
+                            <dt>契約</dt>
+                            <dd>
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </dd>
+                            <dt>着工</dt>
+                            <dd>
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </dd>
+                            <dt>完成</dt>
+                            <dd>
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
 
-            <section class="inquiry container">
-                <h2 class="section-title section-title--black">お問い合わせ</h2>
-                <p class="section-introduction">
-                    お問い合わせは下記からお願いいたします。
-                </p>
-                <ul class="inquiry__list">
-                    <li>
-                        <a href="#">
-                            <img
-                                src="img/icon-document.png"
-                                alt="資料請求画像アイコン"
-                            />
-                            <p>資料請求</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img
-                                src="img/icon-seminar.png"
-                                alt="Web説明会画像アイコン"
-                            />
-                            <p>Web説明会</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img
-                                src="img/icon-talk.png"
-                                alt="個別相談画像アイコン"
-                            />
-                            <p>個別相談</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+                <section class="inquiry container">
+                    <h2 class="section-title section-title--black">
+                        お問い合わせ
+                    </h2>
+                    <p class="section-introduction">
+                        お問い合わせは下記からお願いいたします。
+                    </p>
+                    <ul class="inquiry__list">
+                        <li>
+                            <a href="#">
+                                <img
+                                    src="img/icon-document.png"
+                                    alt="資料請求画像アイコン"
+                                />
+                                <p>資料請求</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img
+                                    src="img/icon-seminar.png"
+                                    alt="Web説明会画像アイコン"
+                                />
+                                <p>Web説明会</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img
+                                    src="img/icon-talk.png"
+                                    alt="個別相談画像アイコン"
+                                />
+                                <p>個別相談</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </main>
 
         <footer class="footer container">

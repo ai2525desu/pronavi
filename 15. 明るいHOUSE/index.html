@@ -156,10 +156,10 @@
                             <li>着工</li>
                             <li>完成</li>
                         </ol>
-                        <!-- ここの丸印をspanで作成するのかそれともcounter-numberで作成するのかを悩み -->
-                        <!-- ol＋liで数字自体を出しつつ明確に隙間を設定できるような方法もあり -->
                         <ol class="process__detail">
                             <li>
+                                <!-- ここのspanタグにcount-numberを使用することで
+                                 自動的に行が増えてもナンバリングしてもらえる -->
                                 <span></span>
                                 <h3>ヒアリング</h3>
                                 <p>
@@ -213,28 +213,34 @@
                     <ul class="inquiry__list">
                         <li>
                             <a href="#">
-                                <img
-                                    src="img/icon-document.png"
-                                    alt="資料請求画像アイコン"
-                                />
+                                <div class="inquiry__img">
+                                    <img
+                                        src="img/icon-document.png"
+                                        alt="資料請求画像アイコン"
+                                    />
+                                </div>
                                 <p>資料請求</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img
-                                    src="img/icon-seminar.png"
-                                    alt="Web説明会画像アイコン"
-                                />
+                                <div class="inquiry__img">
+                                    <img
+                                        src="img/icon-seminar.png"
+                                        alt="Web説明会画像アイコン"
+                                    />
+                                </div>
                                 <p>Web説明会</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img
-                                    src="img/icon-talk.png"
-                                    alt="個別相談画像アイコン"
-                                />
+                                <div class="inquiry__img">
+                                    <img
+                                        src="img/icon-talk.png"
+                                        alt="個別相談画像アイコン"
+                                    />
+                                </div>
                                 <p>個別相談</p>
                             </a>
                         </li>
@@ -243,21 +249,25 @@
             </div>
         </main>
 
-        <footer class="footer container">
-            <nav class="footer__nav">
-                <ul>
-                    <li><a href="#">私たちについて</a></li>
-                    <li><a href="#">サービス </a></li>
-                    <li><a href="#">商品情報</a></li>
-                    <li><a href="#">展示会</a></li>
-                    <li><a href="#">暮らしの日記</a></li>
-                    <li><a href="#">会社概要</a></li>
-                </ul>
-            </nav>
-            <small class="footer__copyright">
-                Copyright &copy; 2021 Akarui HOUSE All Rights Reserved.
-            </small>
+        <footer class="footer">
+            <div class="footer__inner container">
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="#">私たちについて</a></li>
+                        <li><a href="#">サービス </a></li>
+                        <li><a href="#">商品情報</a></li>
+                        <li><a href="#">展示会</a></li>
+                        <li><a href="#">暮らしの日記</a></li>
+                        <li><a href="#">会社概要</a></li>
+                    </ul>
+                </nav>
+                <small class="footer__copyright">
+                    Copyright &copy; 2021 Akarui HOUSE All Rights Reserved.
+                </small>
+            </div>
         </footer>
+        <!-- TOPへ戻るためのボタン風リンク -->
+        <a id="to-top" class="to-top" href="#"></a>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/main.js"></script>

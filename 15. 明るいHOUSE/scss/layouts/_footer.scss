@@ -1,0 +1,32 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.footer {
+    background-color: $color-black;
+    text-align: center;
+    &__inner {
+        padding-block: 20px;
+        a {
+            color: $color-white;
+        }
+        small {
+            color: $color-white;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0 60px 0;
+        }
+        li {
+            padding-inline: 20px;
+            &:not(:last-child) {
+                border-right: 1px solid $color-white;
+            }
+        }
+    }
+}

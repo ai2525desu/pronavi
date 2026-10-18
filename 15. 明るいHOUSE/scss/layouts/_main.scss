@@ -5,7 +5,7 @@
     width: calc(100% - $header-width);
     height: 100vh;
     video {
-        width: 100%;
+        height: 100vh;
         position: fixed;
         top: 0;
         left: $header-width;
@@ -24,6 +24,22 @@
         border: 1px solid $color-white;
         position: relative;
 
+        a {
+            display: inline-block;
+            box-shadow: inset 0px 0px 1px 15px rgba(51, 51, 51, 1);
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                box-shadow: inset 0px -20px 10px 1px rgba(51, 51, 51);
+            }
+        }
+
         p {
             position: absolute;
             left: 0;
@@ -32,12 +48,7 @@
             color: $color-white;
             font-size: 0.75rem;
             width: 100%;
-            // グラデーションの指定はもう一度要確認
-            background: linear-gradient(
-                to top,
-                rgba(51, 51, 51, 1) 60%,
-                rgba(51, 51, 51, 0)
-            );
+            z-index: 1;
         }
     }
 }
@@ -98,25 +109,62 @@
 }
 
 .process {
+    font-size: 1rem;
+
     &__content {
-        margin-top: 60px;
         display: flex;
+        justify-content: space-between;
+        gap: 40px;
     }
 
     &__figure-list {
-        width: 20%;
         list-style: decimal;
         list-style-position: inside;
+        position: relative;
 
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            border-left: 50px solid #ffdd00;
+        }
         li {
+            width: 200px;
+            height: 80px;
+            background-color: $color-process;
+            position: relative;
+            color: $color-white;
+            line-height: 80px;
+            text-align: center;
+
             &:not(:last-child) {
                 margin-bottom: 60px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100%;
+                // borderの場合
+                // border-top: 30px solid $color-process;
+                // border-left: 100px solid transparent;
+                // border-right: 100px solid transparent;
+
+                // clip-pathの場合
+                width: 100%;
+                height: 30px;
+                background-color: $color-process;
+                clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
             }
         }
     }
 
     &__detail {
-        width: 80%;
+        width: auto;
         counter-reset: process-number;
 
         li {
@@ -126,7 +174,7 @@
             grid-template-areas:
                 "number title"
                 "blank text";
-            gap: 8px;
+            gap: 10px;
             align-items: center;
             &:not(:last-child) {
                 margin-bottom: 43px;
@@ -150,6 +198,11 @@
         }
         h3 {
             grid-area: title;
+            color: $color-black;
+            font-size: 1.25rem;
+            font-weight: 400;
+            border-bottom: 1px solid $color-black;
+            padding-bottom: 8px;
         }
         p {
             grid-area: text;
@@ -158,4 +211,53 @@
 }
 
 .inquiry {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        li {
+            flex: 1;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+            padding-block: 50px;
+            color: $color-black;
+            border: 1px solid $color-black;
+            position: relative;
+
+            &:hover {
+                outline: 3px solid $color-black;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                right: 4px;
+                bottom: 4px;
+
+                // borderで作成した場合
+                // border-top: 0px solid transparent;
+                // border-right: 0px solid transparent;
+                // border-left: 20px solid transparent;
+                // border-bottom: 20px solid $color-black;
+
+                // clip-pathの場合
+                width: 20px;
+                height: 20px;
+                background-color: $color-black;
+                // X軸とY軸で三角形を構築する三点の点の場所を指定
+                clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+            }
+        }
+    }
+    &__img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 5px;
+        margin-inline: auto;
+    }
 }

@@ -25,6 +25,11 @@ img {
     object-fit: cover;
 }
 
+video {
+    width: 100%;
+    object-fit: cover;
+}
+
 header {
     position: fixed;
     left: 0;
@@ -49,6 +54,9 @@ footer {
 }
 
 section {
-    margin: 0 0 120px 0;
+    padding-bottom: 120px;
     z-index: 10;
+    &:last-child {
+        padding-bottom: 160px;
+    }
 }

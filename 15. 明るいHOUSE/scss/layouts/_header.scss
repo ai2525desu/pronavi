@@ -2,10 +2,22 @@
 @use "../common/mixin" as m;
 
 .header {
-    padding: 3%;
+    padding: 40px;
+
+    @include m.tb {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &__logo {
         margin-bottom: 25px;
+
+        @include m.tb {
+            width: 180px;
+            margin-bottom: 0;
+        }
     }
 
     &__toggle-btn {
@@ -29,20 +41,34 @@
                 position: absolute;
 
                 &:nth-child(1) {
-                    top: 36%;
+                    top: 12%;
                 }
                 &:nth-child(2) {
                     top: 50%;
                     transform: translateY(-50%);
                 }
                 &:nth-child(3) {
-                    bottom: 36%;
+                    bottom: 12%;
                 }
             }
         }
     }
 
     &__nav {
+        opacity: 1;
+        @include m.tb {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: $header-width;
+            height: 100vh;
+            background-color: $color-white;
+            transition: all 0.5s;
+            opacity: 0;
+            z-index: 999;
+            padding: 40px;
+        }
+
         ul {
             &:not(:last-child) {
                 margin-bottom: 50px;
@@ -53,6 +79,48 @@
         }
         a {
             color: $color-black;
+        }
+    }
+
+    &__mask {
+        display: none;
+    }
+
+    &.open {
+        .header__toggle-btn {
+            span {
+                background-color: $color-white;
+                z-index: 999;
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(225deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+                &:nth-child(3) {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(-225deg);
+                }
+            }
+        }
+
+        .header__nav {
+            left: 0;
+            opacity: 1;
+        }
+
+        .header__mask {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-black;
+            opacity: 0.8;
+            cursor: pointer;
         }
     }
 }

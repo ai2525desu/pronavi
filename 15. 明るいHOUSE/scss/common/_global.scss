@@ -9,7 +9,7 @@
 
 .section {
     &-title {
-        font-size: 1.75rem;
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
         margin-bottom: 60px;
         text-align: center;
         display: flex;

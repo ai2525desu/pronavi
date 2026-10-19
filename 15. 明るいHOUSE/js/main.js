@@ -15,7 +15,7 @@ $(function () {
             $(this).attr("aria-label", "メニューを閉じる");
         }
     });
-    $(".header__mask").on("click", function () {
+    $(".header__mask, .header__nav a").on("click", function () {
         $("header").removeClass("open");
         $(".header__toggle-btn").attr("aria-expanded", "false");
         $(".header__toggle-btn").attr("aria-label", "メニューを開く");

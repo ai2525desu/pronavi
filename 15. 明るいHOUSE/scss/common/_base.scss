@@ -8,14 +8,18 @@ html {
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
+    // ここにメインとなる#121212のカラーを設定しておくのもあり
 }
 
+// liでlist-style:nine;を指定する方法もある
 ul,
 ol {
     list-style: none;
 }
 
 a {
+    // あらかじめaタグにも#121212を指定する方法もあり
+    // display:inline-block;もあらかじめ解答例では指定
     text-decoration: none;
 }
 
@@ -45,19 +49,24 @@ header {
     }
 }
 
+// 解答例ではここをcontainerとして,mainとfooterを囲うdivを形成
 main,
 footer {
     margin-left: $header-width;
 
     @include m.tb {
         margin-left: 0;
+    }
+}
+// main部分のみ、レスポンシブのheader固定が上部に変わるため、指定を追加
+main {
+    @include m.tb {
         margin-top: $header-height;
     }
 }
 
 section {
     padding-bottom: 120px;
-    z-index: 10;
     &:last-child {
         padding-bottom: 160px;
     }

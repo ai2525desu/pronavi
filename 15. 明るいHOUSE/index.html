@@ -87,7 +87,15 @@
 
         <main>
             <div class="main-bg-video">
-                <video src="video/background-video.mp4" autoplay loop></video>
+                <!-- 自身の記述 -->
+                <!-- <video src="video/background-video.mp4" autoplay loop></video> -->
+                <video
+                    src="video/background-video.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                ></video>
             </div>
             <div class="main-bg-black">
                 <section class="architectural-examples container">
@@ -171,7 +179,7 @@
                             </li>
                             <li>
                                 <span></span>
-                                <h3>プランニング</h3>
+                                <h3>プラン提案</h3>
                                 <p>
                                     テキストテキストテキストテキストテキストテキストテキストテキスト
                                     テキストテキストテキストテキストテキストテキストテキストテキスト
@@ -220,6 +228,7 @@
                                         src="img/icon-document.png"
                                         alt="資料請求画像アイコン"
                                     />
+                                    <!-- 上記のaltはpタグの内容と重複している側面があるので、あえて記述させず、支援技術での読み上げの重複を防ぐ観点からalt=""とすることもできる -->
                                 </div>
                                 <p>資料請求</p>
                             </a>
@@ -256,7 +265,7 @@
                 <nav class="footer__nav">
                     <ul>
                         <li><a href="#">私たちについて</a></li>
-                        <li><a href="#">サービス </a></li>
+                        <li><a href="#">サービス</a></li>
                         <li><a href="#">商品情報</a></li>
                         <li><a href="#">展示会</a></li>
                         <li><a href="#">暮らしの日記</a></li>
@@ -267,9 +276,14 @@
                     Copyright &copy; 2021 Akarui HOUSE All Rights Reserved.
                 </small>
             </div>
+            <!-- TOPへ戻るためのボタン風リンク -->
+            <a
+                id="to-top"
+                class="to-top"
+                href="#"
+                aria-label="ページの先頭へ戻る"
+            ></a>
         </footer>
-        <!-- TOPへ戻るためのボタン風リンク -->
-        <a id="to-top" class="to-top" href="#"></a>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/main.js"></script>

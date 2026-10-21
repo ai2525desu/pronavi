@@ -2,6 +2,7 @@
 @use "../common/mixin" as m;
 
 .main-bg-video {
+    // このwidthはあえてheaderの固定文を引く必要はないのか？
     width: calc(100% - $header-width);
     height: 100vh;
 
@@ -21,6 +22,7 @@
     }
 }
 
+// 解答例では、projectというsectionにはグラデーション。featureのsectionにはblack一色の背景を実装してあった
 .main-bg-black {
     background: linear-gradient(
         to bottom,
@@ -46,7 +48,7 @@
 
         a {
             display: inline-block;
-            box-shadow: inset 0px 0px 1px 15px rgba(51, 51, 51, 1);
+            // box-shadow: inset 0px 0px 1px 15px rgba(51, 51, 51, 1); 不要
             position: relative;
 
             &::after {
@@ -56,7 +58,8 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                box-shadow: inset 0px -20px 10px 1px rgba(51, 51, 51);
+                box-shadow: inset 0px -30px 15px -1px rgba(51, 51, 51, 1);
+                // box-shadow: inset 0px -20px 10px 1px rgba(51, 51, 51);
             }
         }
 
@@ -85,6 +88,7 @@
         // width:30%のように三等分にして同じ大きさでliのサイズをそろえるための指定
         flex: 1;
         a {
+            // 解答ではblock指定
             display: inline-block;
             color: $color-white;
             width: 100%;
@@ -97,9 +101,12 @@
             z-index: 1;
             overflow: hidden;
 
+            // 自身の回答
             &::after {
                 position: absolute;
-                background: rgba(198, 198, 198, 0.5);
+                // background: rgba(198, 198, 198, 0.5);
+                background-color: $color-white;
+                opacity: 0.3;
                 content: "";
                 width: 100%;
                 height: 100%;
@@ -116,6 +123,26 @@
                     transform: scale(1, 1);
                 }
             }
+
+            // 解答例:beforeで前の要素のleft-100%をhover時にleft0にすることでアニメーションの動きを付けた
+            // &::before {
+            //     content: "";
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: $color-white;
+            //     position: absolute;
+            //     top: 0;
+            //     left: -100%;
+            //     opacity: 0.3;
+            //     transition: 0.5s;
+            //     pointer-events: none;
+            // }
+
+            // &:hover {
+            //     &::before {
+            //         left: 0;
+            //     }
+            // }
         }
 
         h3 {
@@ -173,9 +200,9 @@
             &::before {
                 position: absolute;
                 content: "";
+                top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
-                top: 100%;
                 // borderの場合
                 // border-top: 30px solid $color-process;
                 // border-left: 100px solid transparent;
@@ -215,6 +242,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                // 解答例ではline-height:35pxにて縦中央揃え
                 width: 35px;
                 height: 35px;
                 content: counter(process-number);
@@ -262,6 +290,7 @@
             color: $color-black;
             border: 1px solid $color-black;
             position: relative;
+            transition: 0.1s;
 
             &:hover {
                 outline: 3px solid $color-black;

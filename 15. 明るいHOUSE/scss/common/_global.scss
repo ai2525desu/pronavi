@@ -10,7 +10,7 @@
 .section {
     &-title {
         font-size: clamp(1.25rem, 2vw, 1.75rem);
-        margin-bottom: 60px;
+        margin-bottom: clamp(30px, 4.5vw, 60px);
         text-align: center;
         display: flex;
         justify-content: space-between;
@@ -20,7 +20,7 @@
         &::before,
         &::after {
             content: "";
-            width: 30%;
+            width: 28%;
             border-top: 1px solid $color-white;
         }
 

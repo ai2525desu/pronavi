@@ -1,28 +1,383 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sneakers</title>
+        <meta
+            name="description"
+            content="テキストテキストテキストテキストテキストテキスト"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <!-- プラグイン「slick」のcssを読み込む -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Sneakers</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <!-- プラグイン「slick」のcssを読み込む -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <body>
+        <header class="header">
+            <h1 class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Sneakers" />
+                </a>
+            </h1>
+            <!-- ハンバーガーメニューのボタン：三本線 -->
+            <button
+                class="header__toggle-btn"
+                aria-label="メニューを開く"
+                aria-expanded="false"
+                aria-controls="header__nav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- nav -->
+            <nav id="header__nav" class="header__nav">
+                <ul>
+                    <li><a href="#pick-up">PICK UP</a></li>
+                    <li><a href="#feature">FEATURE</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+                <ul class="header__sns-links">
+                    <li>
+                        <a
+                            href="https://x.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            instagram
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- tb以降のハンバーガーメニューの背景 -->
+            <div class="header__mask"></div>
+        </header>
 
-<body>
+        <div class="main-video">
+            <video
+                src="video/video.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
+        </div>
 
+        <main>
+            <section id="pick-up" class="pick-up">
+                <h2 class="section-title">PICK UP</h2>
+                <ul class="pick-up__slick-list">
+                    <li>
+                        <img src="img/pickup1.jpg" alt="ピックアップ商品1" />
+                    </li>
+                    <li>
+                        <img src="img/pickup2.jpg" alt="ピックアップ商品2" />
+                    </li>
+                    <li>
+                        <img src="img/pickup3.jpg" alt="ピックアップ商品3" />
+                    </li>
+                    <li>
+                        <img src="img/pickup4.jpg" alt="ピックアップ商品4" />
+                    </li>
+                    <li>
+                        <img src="img/pickup5.jpg" alt="ピックアップ商品5" />
+                    </li>
+                    <li>
+                        <img src="img/pickup6.jpg" alt="ピックアップ商品6" />
+                    </li>
+                    <li>
+                        <img src="img/pickup7.jpg" alt="ピックアップ商品7" />
+                    </li>
+                    <li>
+                        <img src="img/pickup8.jpg" alt="ピックアップ商品8" />
+                    </li>
+                    <li>
+                        <img src="img/pickup9.jpg" alt="ピックアップ商品9" />
+                    </li>
+                </ul>
+            </section>
+            <section id="feature" class="feature">
+                <h2 class="section-title">FEATURE</h2>
+                <ul class="feature__list">
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature1.jpg"
+                                    alt="白地にオレンジラインのスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature2.jpg"
+                                    alt="白地にオレンジラインと黒のナイキマークの入ったスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature3.jpg"
+                                    alt="緑色に黒い靴ひものスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature4.jpg"
+                                    alt="白とグレージュに紺色とピンクのラインが入ったナイキのスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature5.jpg"
+                                    alt="靴ひもから下地まですべてカーキ色のスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature6.jpg"
+                                    alt="真っ白なスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature7.jpg"
+                                    alt="黒地に白いナイキマークの入ったスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature8.jpg"
+                                    alt="真っ白のナイキのハイカットスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                    <li>
+                        <article class="feature__article">
+                            <div class="feature__article-image">
+                                <img
+                                    src="img/feature9.jpg"
+                                    alt="ダークグレーのナイキスニーカー"
+                                />
+                            </div>
+                            <span class="feature__article-category"
+                                >category</span
+                            >
+                            <p class="feature__article-detail">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </p>
+                            <time
+                                class="feature__article-datetime"
+                                datetime="XXXX-XX-XX"
+                                >XXXX.XX.XX</time
+                            >
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section id="contact" class="contact">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contanct__content">
+                    <div class="contact__information">
+                        <p>テキストテキストテキスト</p>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                    <form action="/" method="post">
+                        <label>
+                            Name:
+                            <input
+                                type="text"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            />
+                        </label>
+                        <label>
+                            Mail:
+                            <input
+                                type="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            />
+                        </label>
+                        <label>
+                            Message:
+                            <textarea name="message"></textarea>
+                        </label>
+                        <input type="submit" value="SEND" />
+                    </form>
+                </div>
+            </section>
+        </main>
 
-
-    <!-- プラグイン「slick」のjsを読み込む -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
+        <footer class="footer">
+            <small>&copy; Sneakers</small>
+        </footer>
+        <!-- プラグイン「slick」のjsを読み込む -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

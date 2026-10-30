@@ -1,0 +1,11 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.footer {
+    background-color: $color-black;
+    text-align: center;
+    padding: 10px;
+    small {
+        color: $color-white;
+    }
+}

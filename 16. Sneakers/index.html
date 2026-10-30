@@ -38,25 +38,14 @@
                     <img src="img/logo.svg" alt="Sneakers" />
                 </a>
             </h1>
-            <!-- ハンバーガーメニューのボタン：三本線 -->
-            <button
-                class="header__toggle-btn"
-                aria-label="メニューを開く"
-                aria-expanded="false"
-                aria-controls="header__nav"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <!-- nav -->
             <nav id="header__nav" class="header__nav">
-                <ul>
+                <ul class="header__nav-list">
                     <li><a href="#pick-up">PICK UP</a></li>
                     <li><a href="#feature">FEATURE</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
-                <ul class="header__sns-links">
+                <ul class="header__nav-list header__nav-list--no-border">
                     <li>
                         <a
                             href="https://x.com/"
@@ -86,6 +75,17 @@
                     </li>
                 </ul>
             </nav>
+            <!-- ハンバーガーメニューのボタン：三本線 -->
+            <button
+                class="header__toggle-btn"
+                aria-label="メニューを開く"
+                aria-expanded="false"
+                aria-controls="header__nav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <!-- tb以降のハンバーガーメニューの背景 -->
             <div class="header__mask"></div>
         </header>
@@ -145,17 +145,19 @@
                                     alt="白地にオレンジラインのスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -166,17 +168,19 @@
                                     alt="白地にオレンジラインと黒のナイキマークの入ったスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -187,17 +191,19 @@
                                     alt="緑色に黒い靴ひものスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -208,17 +214,19 @@
                                     alt="白とグレージュに紺色とピンクのラインが入ったナイキのスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -229,17 +237,19 @@
                                     alt="靴ひもから靴表面の生地まですべてカーキ色のスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -250,17 +260,19 @@
                                     alt="真っ白なスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -271,17 +283,19 @@
                                     alt="黒地に白いナイキマークの入ったスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -292,17 +306,19 @@
                                     alt="真っ白のナイキのハイカットスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                     <li>
@@ -313,22 +329,24 @@
                                     alt="ダークグレーのナイキスニーカー"
                                 />
                             </div>
-                            <span class="feature__article-category"
-                                >category</span
-                            >
-                            <p class="feature__article-detail">
-                                テキストテキストテキストテキストテキストテキストテキストテキスト
-                            </p>
-                            <time
-                                class="feature__article-datetime"
-                                datetime="XXXX-XX-XX"
-                                >XXXX.XX.XX</time
-                            >
+                            <div class="feature__article-information">
+                                <p class="feature__article-category">
+                                    category
+                                </p>
+                                <p class="feature__article-detail">
+                                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <time
+                                    class="feature__article-datetime"
+                                    datetime="XXXX-XX-XX"
+                                    >XXXX.XX.XX</time
+                                >
+                            </div>
                         </article>
                     </li>
                 </ul>
             </section>
-            <section id="contact" class="contact container">
+            <section id="contact" class="contact">
                 <h2 class="section-title">CONTACT</h2>
                 <div class="contact__content">
                     <div class="contact__information">
@@ -344,10 +362,11 @@
                             テキストテキストテキストテキストテキストテキストテキストテキストテキスト
                         </p>
                     </div>
-                    <form action="/" method="post">
+                    <form class="contact__form" action="/" method="post">
                         <label>
                             Name:
                             <input
+                                class="contact__form-input"
                                 type="text"
                                 name="name"
                                 autocomplete="name"
@@ -357,6 +376,7 @@
                         <label>
                             Mail:
                             <input
+                                class="contact__form-input"
                                 type="email"
                                 name="email"
                                 autocomplete="email"
@@ -365,9 +385,16 @@
                         </label>
                         <label>
                             Message:
-                            <textarea name="message"></textarea>
+                            <textarea
+                                class="contact__form-textarea"
+                                name="message"
+                            ></textarea>
                         </label>
-                        <input type="submit" value="SEND" />
+                        <input
+                            class="contact__form-button"
+                            type="submit"
+                            value="SEND"
+                        />
                     </form>
                 </div>
             </section>

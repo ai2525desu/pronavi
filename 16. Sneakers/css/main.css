@@ -30,8 +30,8 @@ video {
 }
 
 section {
-  padding: 100px 0pxx 50px;
-  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -44,5 +44,222 @@ section {
   margin-bottom: 30px;
   font-size: 2.25rem;
   text-align: center;
+}
+
+.main-video {
+  margin-top: 80px;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+@media (max-width: 980px) {
+  .main-video {
+    height: auto;
+  }
+}
+.main-video video {
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  padding: 20px 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+.header__logo {
+  width: 175px;
+  height: 40px;
+}
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #121212;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 999;
+  padding: 60px 25px;
+}
+.header__nav-list {
+  margin-bottom: 60px;
+}
+.header__nav-list li {
+  padding-block: 20px;
+  border-top: 1px solid #fff;
+}
+.header__nav-list li:last-child {
+  border-bottom: 1px solid #fff;
+}
+.header__nav-list a {
+  color: #fff;
+}
+.header__nav-list--no-border {
+  margin-bottom: 0;
+}
+.header__nav-list--no-border li {
+  padding-block: 5px;
+  border: none;
+}
+.header__nav-list--no-border li:last-child {
+  border: none;
+}
+.header__toggle-btn {
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.header__toggle-btn span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #121212;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.header__toggle-btn span:nth-child(1) {
+  top: 20%;
+}
+.header__toggle-btn span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__toggle-btn span:nth-child(3) {
+  bottom: 20%;
+}
+.header__mask {
+  display: none;
+  transition: all 0.5s;
+}
+.header.open .header__toggle-btn span {
+  background-color: #fff;
+  z-index: 999;
+}
+.header.open .header__toggle-btn span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(225deg);
+}
+.header.open .header__toggle-btn span:nth-child(2) {
+  opacity: 0;
+  transform: translateY(-50%) rotate(0deg);
+}
+.header.open .header__toggle-btn span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-225deg);
+}
+.header.open .header__nav {
+  left: 0;
+  opacity: 1;
+}
+.header.open .header__mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #121212;
+  text-align: center;
+  padding: 10px;
+}
+.footer small {
+  color: #fff;
+}
+
+.pick-up {
+  margin-top: 50px;
+}
+.pick-up__slick-list {
+  width: 100%;
+  margin: auto;
+}
+.pick-up__slick-list li {
+  height: auto;
+  padding-inline: 10px;
+}
+.pick-up__slick-list img {
+  height: 100%;
+}
+
+.feature__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 500px) {
+  .feature__list {
+    grid-template-columns: 1fr;
+  }
+}
+.feature__article {
+  box-shadow: 0 0 10px #d5d5d5;
+}
+.feature__article-information {
+  padding: 30px;
+}
+.feature__article-category, .feature__article-detail {
+  margin-bottom: 20px;
+}
+.feature__article-category {
+  font-size: 0.75rem;
+}
+.feature__article-detail {
+  font-weight: bold;
+}
+.feature__article-datetime {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.contact {
+  background-color: #121212;
+  color: #fff;
+  padding-inline: 16px;
+}
+.contact__content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__information {
+  flex: 0.45;
+}
+.contact__information p {
+  margin-bottom: 30px;
+}
+.contact__form {
+  flex: 0.45;
+}
+.contact__form label {
+  display: block;
+  margin-bottom: 20px;
+}
+.contact__form-input, .contact__form-textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
+.contact__form-button {
+  width: 200px;
+  border: 1px solid #fff;
+  background-color: #121212;
+  color: #fff;
+  padding: 12px;
 }
 /*# sourceMappingURL=main.css.map */

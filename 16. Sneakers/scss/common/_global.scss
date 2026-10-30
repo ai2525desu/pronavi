@@ -12,3 +12,17 @@
     font-size: 2.25rem;
     text-align: center;
 }
+
+.main-video {
+    margin-top: $header-height;
+    width: 100%;
+    height: calc(100vh - $header-height);
+
+    @include m.tb {
+        height: auto;
+    }
+
+    video {
+        height: 100%;
+    }
+}

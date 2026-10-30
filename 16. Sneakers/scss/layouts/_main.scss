@@ -1,0 +1,106 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.pick-up {
+    // JQueryでスムーススクロールの調整をした分、pickup部分のみpadding-topの文が不足したのでここでmargin-topと追加してレイアウトとの調整を入れた
+    margin-top: 50px;
+    &__slick-list {
+        width: 100%;
+        // display: flex; 検証ツールで確認したが、はずしｔもSlickの動作に問題はなかった
+        margin: auto;
+
+        li {
+            height: auto;
+            // paddingに
+            padding-inline: 10px;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.feature {
+    // header固定によるセクションタイトルとのかぶりを無くすためのネガティブマージン指定は下記の通り
+    // 自身で他の解決策がないか調べて、JQueryに
+    // margin-top: -50px;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+
+        @include m.sp {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__article {
+        box-shadow: 0 0 10px $color-box-shadow;
+
+        &-information {
+            padding: 30px;
+        }
+
+        &-category,
+        &-detail {
+            margin-bottom: 20px;
+        }
+
+        &-category {
+            font-size: 0.75rem;
+        }
+
+        &-detail {
+            font-weight: bold;
+        }
+
+        &-datetime {
+            display: block;
+            text-align: right;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.contact {
+    background-color: $color-black;
+    color: $color-white;
+    padding-inline: 16px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        // gap: 92px;
+    }
+
+    &__information {
+        flex: 0.45;
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__form {
+        flex: 0.45;
+        label {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        &-input,
+        &-textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: $color-white;
+        }
+
+        &-button {
+            width: 200px;
+            border: 1px solid $color-white;
+            background-color: $color-black;
+            color: $color-white;
+            padding: 12px;
+        }
+    }
+}

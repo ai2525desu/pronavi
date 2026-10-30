@@ -9,7 +9,8 @@
 
 .section-title {
     margin-bottom: 30px;
-    font-size: 2.25rem;
+    // セクションタイトルの文字のレスポンシブ抜け落ち
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
     text-align: center;
 }
 

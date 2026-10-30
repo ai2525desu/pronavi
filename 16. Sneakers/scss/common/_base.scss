@@ -6,8 +6,11 @@ html {
 }
 
 body {
+    color: $color-black;
     font-family: $base-font-family;
     font-size: $base-font-size;
+    // bodyにline-heightを入れることで、行間を統一し、子要素に正しく継承させるため。そうすることでサイト全体の統一感が出る
+    line-height: 1.7;
 }
 
 ul {

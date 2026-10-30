@@ -27,8 +27,9 @@
     // margin-top: -50px;
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px;
+        // 解答例26px
 
         @include m.sp {
             grid-template-columns: 1fr;
@@ -36,7 +37,15 @@
     }
 
     &__article {
-        box-shadow: 0 0 10px $color-box-shadow;
+        box-shadow: 0 0 8px 4px $color-box-shadow;
+        // 自分：box-shadow: 0 0 10px $color-box-shadow;
+
+        // 画像のフェードインはmain.jsで制御
+        &-image {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s;
+        }
 
         &-information {
             padding: 30px;
@@ -71,7 +80,10 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        // gap: 92px;
+
+        @include m.sp {
+            flex-direction: column;
+        }
     }
 
     &__information {
@@ -101,6 +113,10 @@
             background-color: $color-black;
             color: $color-white;
             padding: 12px;
+
+            @include m.sp {
+                width: 100%;
+            }
         }
     }
 }

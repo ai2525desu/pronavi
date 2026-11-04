@@ -1,0 +1,26 @@
+@use "./variables" as *;
+@use "./mixin" as m;
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: $base-font-family;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+

@@ -7,6 +7,8 @@ html {
 
 body {
     font-family: $base-font-family;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
 }
 
 ul {
@@ -22,5 +24,3 @@ img {
     vertical-align: bottom;
     object-fit: cover;
 }
-
-

@@ -3,7 +3,7 @@
 
 .header {
     padding: 40px 0 0 50px;
-    height: 100px;
+    height: $header-height;
 
     &__logo {
         width: 100px;
@@ -27,11 +27,17 @@
         top: 0;
         right: 0;
         cursor: pointer;
+
+        &:hover {
+            // opacity: 0.7;
+            // filter: brightness(120%);
+            background-color: mix(#fff, $color-red, 20%);
+        }
         span {
             position: absolute;
             display: block;
             width: 50px;
-            height: 2px;
+            height: 2.5px;
             background-color: $color-white;
             border-radius: 4px;
             transition: all 0.5s;
@@ -51,7 +57,7 @@
     }
 
     &__nav {
-        display: block;
+        // display: none;→transitionが聞かなくなってしまうので、別の記述方法。opacity+visibilityで表現
         position: fixed;
         top: 0;
         left: 0;
@@ -59,7 +65,10 @@
         height: 100vh;
         z-index: 99;
         opacity: 0;
-        transition: all 0.5s;
+        transition:
+            opacity 0.4s ease,
+            visibility 0.4s ease;
+        visibility: hidden;
         text-align: center;
         font-weight: bold;
         background-color: $color-red;
@@ -101,6 +110,35 @@
             border-right: 1px solid $color-white;
             border-bottom: 1px solid $color-white;
             pointer-events: none;
+        }
+    }
+
+    &.open {
+        .header__toggle-btn {
+            &:hover {
+                background-color: $color-red;
+                opacity: 0.7;
+            }
+            span {
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    // ここでopacity:0;を指定することで移動後に滑らかに消えていく
+                    opacity: 0;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                &:nth-child(3) {
+                    bottom: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+
+        .header__nav {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

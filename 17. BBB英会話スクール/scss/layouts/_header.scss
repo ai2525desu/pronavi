@@ -29,8 +29,6 @@
         cursor: pointer;
 
         &:hover {
-            // opacity: 0.7;
-            // filter: brightness(120%);
             background-color: mix(#fff, $color-red, 20%);
         }
         span {

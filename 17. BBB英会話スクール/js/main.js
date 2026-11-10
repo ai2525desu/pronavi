@@ -9,7 +9,7 @@ $(function () {
         $(".header").toggleClass("open");
         $(".header__nav").toggleClass("open");
 
-        var expanded = $(this).attr("aria-expanded") === "true";
+        let expanded = $(this).attr("aria-expanded") === "true";
 
         $(this).attr("aria-expanded", !expanded);
         $(".header__nav").attr("aria-hidden", expanded);
@@ -32,19 +32,35 @@ $(function () {
     /*=================================================
   Inview（画面に表示されたタイミングで処理を実行）
   ===================================================*/
+    // reasonのスライドインの挙動
     $(window).scroll(function () {
-        $("").each(function () {
-            var scroll = $(window).scrollTop();
+        $(".reason__list li").each(function () {
+            let scroll = $(window).scrollTop();
 
-            var target = $(this).offset().top;
+            let target = $(this).offset().top;
 
-            var windowHeight = $(window).height();
+            let windowHeight = $(window).height();
 
             if (scroll > target - windowHeight + $(this).outerHeight()) {
                 // outerHeight()はpaddingを含めた高さを取得する
-                $(this).addClass("");
+                $(this).addClass("is-show");
             }
         });
     });
     // これを複数使う
+    // feedbackのズームイン
+    $(window).scroll(function () {
+        $(".feedback__item").each(function () {
+            let scroll = $(window).scrollTop();
+
+            let target = $(this).offset().top;
+
+            let windowHeight = $(window).height();
+
+            if (scroll > target - windowHeight + $(this).outerHeight()) {
+                // outerHeight()はpaddingを含めた高さを取得する
+                $(this).addClass("is-show");
+            }
+        });
+    });
 });

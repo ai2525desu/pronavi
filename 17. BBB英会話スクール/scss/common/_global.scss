@@ -4,9 +4,22 @@
 .container {
     max-width: $width-container;
     padding-inline: 16px;
+    margin-inline: auto;
 }
 
 .section-title {
-    font-size: clamp(28px, 2.5vw, 36px);
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
     margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+    &::after {
+        content: "";
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background: $color-black;
+    }
 }

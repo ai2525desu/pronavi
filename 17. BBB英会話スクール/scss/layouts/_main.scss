@@ -3,16 +3,17 @@
 
 .mainvisual {
     width: 100%;
-    height: clamp(300px, 50vw, 728px);
-    margin-bottom: 120px;
+    height: 100%;
+    margin-bottom: clamp(80px, 8.5vw, 120px);
     background-size: cover;
     position: relative;
 
     &__slide-list {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: clamp(300px, 50vw, 728px);
         margin: auto;
+
         li {
             position: absolute;
             top: 0;
@@ -21,6 +22,10 @@
             height: 100%;
             opacity: 0;
             animation: slideAnimation 15s ease infinite;
+
+            @include m.tb {
+                width: 100%;
+            }
 
             &:nth-child(1) {
                 animation-delay: 0s;
@@ -52,6 +57,15 @@
         top: 50%;
         left: 10%;
         transform: translateY(-50%);
+
+        @include m.tb {
+            padding-inline: 20px;
+            position: static;
+            top: 0;
+            left: 0;
+            transform: translateY(0);
+        }
+
         h2 {
             font-size: clamp(1.75rem, 3.3vw, 2.875rem);
             margin-bottom: 30px;
@@ -89,7 +103,7 @@
                 transform: translateY(-50%) rotate(45deg);
                 position: absolute;
                 top: 50%;
-                right: 35px;
+                right: clamp(25px, 2.5vw, 35px);
             }
         }
     }
@@ -202,6 +216,11 @@
         margin-bottom: 60px;
         transform: scale(0);
 
+        @include m.tb {
+            width: 100%;
+            flex-direction: column-reverse;
+        }
+
         &.is-show {
             // forwardsを付けないとアニメーションの発火後にまた真っ白の状態に戻ってしまう
             animation: zoomIn 0.8s ease-in-out forwards;
@@ -210,19 +229,44 @@
         &:nth-child(odd) {
             align-self: flex-start;
 
+            @include m.tb {
+                align-self: center;
+            }
+
             .feedback__content::before {
                 left: -20px;
                 clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+
+                @include m.tb {
+                    top: auto;
+                    bottom: -29px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+                }
             }
         }
         &:nth-child(even) {
             align-self: flex-end;
             flex-direction: row-reverse;
 
+            @include m.tb {
+                align-self: center;
+                flex-direction: column-reverse;
+            }
+
             .feedback__content::before {
                 right: -20px;
                 left: auto;
                 clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+
+                @include m.tb {
+                    top: auto;
+                    bottom: -29px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+                }
             }
         }
     }
@@ -289,6 +333,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
+        line-height: 1.2;
 
         @include m.tb {
             grid-template-columns: 1fr;
@@ -297,7 +342,7 @@
 
     &__item {
         background-color: $color-white;
-        padding: 60px;
+        padding: clamp(32px, 4.3vw, 60px);
         border-radius: 16px;
         text-align: center;
     }

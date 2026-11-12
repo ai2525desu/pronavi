@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  line-height: 1.2;
+  font-family: 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", メイリオ, sans-serif;
+  line-height: 1.7;
   letter-spacing: 0.1em;
 }
 
@@ -168,17 +168,53 @@ section {
   visibility: visible;
 }
 
+.footer {
+  background-color: #e8e8e8;
+  padding: 60px 0 20px 0;
+}
+.footer__nav-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 60px;
+}
+@media (max-width: 900px) {
+  .footer__nav-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.footer__nav-item h2 {
+  font-size: clamp(0.975rem, 1.2vw, 1rem);
+  margin-bottom: 10px;
+}
+.footer__nav-item ul {
+  padding-left: 10px;
+  font-size: clamp(0.75rem, 1.2vw, 2.875rem);
+}
+.footer__nav-item li {
+  line-height: 1.7;
+  margin-bottom: 3px;
+}
+.footer__nav-item a {
+  color: #333;
+}
+.footer small {
+  display: block;
+  text-align: center;
+  font-size: 0.675rem;
+  font-weight: 100;
+}
+
 .mainvisual {
   width: 100%;
-  height: clamp(300px, 50vw, 728px);
-  margin-bottom: 120px;
+  height: 100%;
+  margin-bottom: clamp(80px, 8.5vw, 120px);
   background-size: cover;
   position: relative;
 }
 .mainvisual__slide-list {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: clamp(300px, 50vw, 728px);
   margin: auto;
 }
 .mainvisual__slide-list li {
@@ -190,6 +226,11 @@ section {
   opacity: 0;
   -webkit-animation: slideAnimation 15s ease infinite;
           animation: slideAnimation 15s ease infinite;
+}
+@media (max-width: 900px) {
+  .mainvisual__slide-list li {
+    width: 100%;
+  }
 }
 .mainvisual__slide-list li:nth-child(1) {
   -webkit-animation-delay: 0s;
@@ -220,6 +261,15 @@ section {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
+}
+@media (max-width: 900px) {
+  .mainvisual__information {
+    padding-inline: 20px;
+    position: static;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
 }
 .mainvisual__information h2 {
   font-size: clamp(1.75rem, 3.3vw, 2.875rem);
@@ -253,7 +303,7 @@ section {
   transform: translateY(-50%) rotate(45deg);
   position: absolute;
   top: 50%;
-  right: 35px;
+  right: clamp(25px, 2.5vw, 35px);
 }
 
 @-webkit-keyframes slideAnimation {
@@ -363,6 +413,12 @@ section {
   margin-bottom: 60px;
   transform: scale(0);
 }
+@media (max-width: 900px) {
+  .feedback__item {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}
 .feedback__item.is-show {
   -webkit-animation: zoomIn 0.8s ease-in-out forwards;
           animation: zoomIn 0.8s ease-in-out forwards;
@@ -370,20 +426,51 @@ section {
 .feedback__item:nth-child(odd) {
   align-self: flex-start;
 }
+@media (max-width: 900px) {
+  .feedback__item:nth-child(odd) {
+    align-self: center;
+  }
+}
 .feedback__item:nth-child(odd) .feedback__content::before {
   left: -20px;
   -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
           clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
 }
+@media (max-width: 900px) {
+  .feedback__item:nth-child(odd) .feedback__content::before {
+    top: auto;
+    bottom: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+            clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+  }
+}
 .feedback__item:nth-child(even) {
   align-self: flex-end;
   flex-direction: row-reverse;
+}
+@media (max-width: 900px) {
+  .feedback__item:nth-child(even) {
+    align-self: center;
+    flex-direction: column-reverse;
+  }
 }
 .feedback__item:nth-child(even) .feedback__content::before {
   right: -20px;
   left: auto;
   -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+@media (max-width: 900px) {
+  .feedback__item:nth-child(even) .feedback__content::before {
+    top: auto;
+    bottom: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+            clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+  }
 }
 .feedback__image {
   width: 120px;
@@ -449,6 +536,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  line-height: 1.2;
 }
 @media (max-width: 900px) {
   .overview__list {
@@ -457,7 +545,7 @@ section {
 }
 .overview__item {
   background-color: #fff;
-  padding: 60px;
+  padding: clamp(32px, 4.3vw, 60px);
   border-radius: 16px;
   text-align: center;
 }

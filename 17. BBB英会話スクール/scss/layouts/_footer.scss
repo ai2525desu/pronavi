@@ -1,0 +1,45 @@
+@use "../common/variables" as *;
+@use "../common/mixin" as m;
+
+.footer {
+    background-color: #e8e8e8;
+    padding: 60px 0 20px 0;
+
+    &__nav-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 60px;
+
+        @include m.tb {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__nav-item {
+        h2 {
+            font-size: clamp(0.975rem, 1.2vw, 1rem);
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 10px;
+            font-size: clamp(0.75rem, 1.2vw, 02.875rem);
+        }
+
+        li {
+            line-height: 1.7;
+            margin-bottom: 3px;
+        }
+
+        a {
+            color: #333;
+        }
+    }
+
+    small {
+        display: block;
+        text-align: center;
+        font-size: 0.675rem;
+        font-weight: 100;
+    }
+}
